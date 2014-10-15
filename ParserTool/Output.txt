@@ -1,0 +1,194 @@
+[RECEIVED_START]
+2014-06-20 10:49:18.447 Received notificationMessage eventType: call
+2014-06-20 10:49:18.448 Received notificationMessage parameters: {
+    callDispositionParams =     {
+        actions = "reject|forward";
+        sessionData = "(77157156_0efbfc5e_1833f15a-67c9-4c24-b5fb-6d20bd6bc010:2144048b644640e43d66069a790a875cdfed74b@47.168.116.57:19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$(19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$d3ZtMzItYXNpcGMtMQ%3D%3D%0A";
+    };
+    callNotificationParams =     {
+        calleeDisplayNumber = gamze3;
+        callerDisplayNumber = gamze1;
+        callerName = "gamze1 erdogan1";
+    };
+    sessionParams =     {
+        actions = "answer|reject|forward";
+        conversation = "brdplayed=yes";
+        sdp = "v=0
+\no=- 18121 18121 IN IP4 47.168.138.148
+\ns=media server session
+\nt=0 0
+\na=ice-lite
+\nm=audio 47458 RTP/SAVPF 0 8 18 13 96
+\nc=IN IP4 47.168.150.32
+\na=rtpmap:0 PCMU/8000
+\na=rtpmap:8 PCMA/8000
+\na=rtpmap:18 G729/8000
+\na=fmtp:18 annexb=no
+\na=rtcp-xr
+\na=rtpmap:13 CN/8000
+\na=rtpmap:96 telephone-event/8000
+\na=fmtp:96 0-15
+\na=sendrecv
+\na=fingerprint:sha-256 FF:3B:E7:A4:A3:C5:5B:25:D5:4E:5B:E2:24:2C:35:47:51:26:79:D1:E0:FF:51:8A:0C:50:C7:4D:92:94:58:14
+\na=setup:actpass
+\na=ice-pwd:kEU0M9eU+ZYLJPbAKhRTEiR42o6iblVt
+\na=ice-ufrag:LmKuU1EsVpxtyenkpuFc6dgo2lKFOrNo
+\na=crypto:1 AES_CM_128_HMAC_SHA1_80 inline:5eU6ilBG550DtrrlINiRv9QpnsMclTFl7s7zWiDd
+\na=rtcp:47459 IN IP4 47.168.150.32
+\na=candidate:1 1 udp 2113937151 47.168.150.32 47458 typ host generation 0
+\na=candidate:1 2 udp 2113937151 47.168.150.32 47459 typ host generation 0
+\nm=video 61458 RTP/SAVPF 111 104 34
+\nc=IN IP4 47.168.150.32
+\nb=AS:2000
+\na=rtpmap:111 VP8/90000
+\na=rtpmap:104 H264/90000
+\na=fmtp:104 profile-level-id=428016; parameter-add=0
+\na=rtpmap:34 H263/90000
+\na=fmtp:34 cif=1
+\na=rtcp-fb:* nack pli
+\na=recvonly
+\na=fingerprint:sha-256 E7:C6:0B:75:4D:84:0F:B5:6E:E0:51:D8:1F:2C:AD:24:59:78:C0:47:4D:2A:CC:77:5D:32:C9:AB:AE:F4:AD:DD
+\na=setup:actpass
+\na=ice-pwd:Y9BUrs9S8tV3g90yQZ2NcvhxWKDVG/TO
+\na=ice-ufrag:i6b49ef9xHV9QjTRCUYB5E1HwYhSjnaW
+\na=crypto:1 AES_CM_128_HMAC_SHA1_80 inline:fIm5lpCL1d6PjxFxPolVM5W2Hmjt/oILc9XdYiHY
+\na=rtcp:61459 IN IP4 47.168.150.32
+\na=candidate:1 1 udp 2113937151 47.168.150.32 61458 typ host generation 0
+\na=candidate:1 2 udp 2113937151 47.168.150.32 61459 typ host generation 0
+\n";
+        sessionData = "(77157156_0efbfc5e_1833f15a-67c9-4c24-b5fb-6d20bd6bc010:2144048b644640e43d66069a790a875cdfed74b@47.168.116.57:19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$(19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$d3ZtMzItYXNpcGMtMQ%3D%3D%0A";
+    };
+}
+[RECEIVED_END]
+[SENT_START]
+2014-06-20 10:49:22.768
+sessionData = "(77157156_0efbfc5e_1833f15a-67c9-4c24-b5fb-6d20bd6bc010:2144048b644640e43d66069a790a875cdfed74b@47.168.116.57:19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$(19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$d3ZtMzItYXNpcGMtMQ%3D%3D%0A 
+SDP:v=0
+
+o=- 7698247037890405243 2 IN IP4 127.0.0.1
+
+s=-
+
+t=0 0
+
+a=msid-semantic: WMS ARDAMS
+
+m=audio 58964 RTP/SAVPF 8 0 13 96
+
+c=IN IP4 217.78.97.15
+
+a=rtcp:56417 IN IP4 217.78.97.15
+
+a=candidate:939880671 1 udp 2122129151 10.254.19.38 58964 typ host generation 0
+
+a=candidate:939880671 2 udp 2122129150 10.254.19.38 56417 typ host generation 0
+
+a=candidate:1988529199 1 tcp 1518149375 10.254.19.38 54185 typ host generation 0
+
+a=candidate:1988529199 2 tcp 1518149374 10.254.19.38 54186 typ host generation 0
+
+a=candidate:3457485067 2 udp 1685921534 217.78.97.15 56417 typ srflx raddr 10.254.19.38 rport 56417 generation 0
+
+a=candidate:3457485067 1 udp 1685921535 217.78.97.15 58964 typ srflx raddr 10.254.19.38 rport 58964 generation 0
+
+a=ice-ufrag:/5bvXoG1PEFwW8pu
+
+a=ice-pwd:I0roPoC3QD5uTkqntWHHSeSv
+
+a=mid:audio
+
+a=sendrecv
+
+a=crypto:1 AES_CM_128_HMAC_SHA1_80 inline:UQ5Db4wQP4dGycEUt4QLqCVsccx1dSikw5R3lE+2
+
+a=rtpmap:8 PCMA/8000
+
+a=rtpmap:0 PCMU/8000
+
+a=rtpmap:13 CN/8000
+
+a=rtpmap:96 telephone-event/8000
+
+a=ssrc:1176191421 cname:z8d4CuVHKCuOSFaA
+
+a=ssrc:1176191421 msid:ARDAMS ARDAMSa0
+
+a=ssrc:1176191421 mslabel:ARDAMS
+
+a=ssrc:1176191421 label:ARDAMSa0
+
+m=video 61753 RTP/SAVPF 111
+
+c=IN IP4 217.78.97.15
+
+a=rtcp:49280 IN IP4 217.78.97.15
+
+a=candidate:939880671 1 udp 2122129151 10.254.19.38 61753 typ host generation 0
+
+a=candidate:939880671 2 udp 2122129150 10.254.19.38 49280 typ host generation 0
+
+a=candidate:1988529199 1 tcp 1518149375 10.254.19.38 54187 typ host generation 0
+
+a=candidate:1988529199 2 tcp 1518149374 10.254.19.38 54188 typ host generation 0
+
+a=candidate:3457485067 1 udp 1685921535 217.78.97.15 61753 typ srflx raddr 10.254.19.38 rport 61753 generation 0
+
+a=candidate:3457485067 2 udp 1685921534 217.78.97.15 49280 typ srflx raddr 10.254.19.38 rport 49280 generation 0
+
+a=ice-ufrag:h8PniicU4Dy5n30r
+
+a=ice-pwd:JGUGy3r58bkt3CpeYSIsTN9r
+
+a=mid:video
+
+a=sendonly
+
+a=crypto:1 AES_CM_128_HMAC_SHA1_80 inline:mkcl6PsEQqS7WTmmuAYTxrk1bJTXW0J/0hMLRHFU
+
+a=rtpmap:111 VP8/90000
+
+a=rtcp-fb:111 ccm fir
+
+a=rtcp-fb:111 nack
+
+a=rtcp-fb:111 nack pli
+
+a=ssrc:631512968 cname:z8d4CuVHKCuOSFaA
+
+a=ssrc:631512968 msid:ARDAMS ARDAMSv0
+
+a=ssrc:631512968 mslabel:ARDAMS
+
+a=ssrc:631512968 label:ARDAMSv0
+
+[RECEIVED_START]
+2014-06-20 10:49:23.097 Received notificationMessage eventType: callCancel
+2014-06-20 10:49:23.103 Received notificationMessage parameters: {
+    callNotificationParams =     {
+        calleeDisplayNumber = "Unknown Number";
+        callerDisplayNumber = "Unknown Number";
+        callerName = "Unknown Name";
+    };
+    sessionParams =     {
+        sessionData = "(77157156_0efbfc5e_1833f15a-67c9-4c24-b5fb-6d20bd6bc010:2144048b644640e43d66069a790a875cdfed74b@47.168.116.57:19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$(19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$d3ZtMzItYXNpcGMtMQ%3D%3D%0A";
+    };
+}
+[RECEIVED_END]
+2014-06-20 10:49:23.043 eventType: callAnswer
+[SENT_END]
+[RECEIVED_START]
+2014-06-20 10:49:37.531 Received notificationMessage eventType: callEnd
+2014-06-20 10:49:37.535 Received notificationMessage parameters: {
+    callNotificationParams =     {
+        calleeDisplayNumber = gamze3;
+        callerDisplayNumber = gamze1;
+        callerName = "gamze1 erdogan1";
+    };
+    sessionParams =     {
+        sessionData = "(77157156_0efbfc5e_1833f15a-67c9-4c24-b5fb-6d20bd6bc010:2144048b644640e43d66069a790a875cdfed74b@47.168.116.57:19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$(19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$d3ZtMzItYXNpcGMtMQ%3D%3D%0A";
+    };
+}
+[RECEIVED_END]
+[SENT_START]
+2014-06-20 10:49:23.043 eventType: callEnd
+[SENT_END]

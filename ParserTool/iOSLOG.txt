@@ -1,0 +1,1257 @@
+2014-06-20 10:48:39.682 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RegistrationService.RegistrationService-createRegistration:>: started
+2014-06-20 10:48:39.688 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RegistrationService.RegistrationService-createRegistration:>: finished
+2014-06-20 10:48:39.690 MobileSDKArchitectureDemo[4728:60b] registering with security type is HTTP
+2014-06-20 10:48:39.692 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RegistrationService.Registration-registerToServerWithServiceTypes:>: started
+2014-06-20 10:48:39.695 MobileSDKArchitectureDemo[4728:60b] [INFO] <RegistrationService.Registration-registerToServerWithServiceTypes:>: Registration was called with these service types : (
+    IM,
+    call,
+    Presence
+)
+2014-06-20 10:48:39.697 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestRequest-getDefaultHeaders>: started
+2014-06-20 10:48:39.699 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestRequest-getDefaultHeaders>: finished
+2014-06-20 10:48:39.700 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestRequest-init:andMessageBody:andServiceUrlSuffix:>: started
+2014-06-20 10:48:39.703 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPostRequest-init:andMessageBody:andServiceUrlSuffix:>: finished
+2014-06-20 10:48:39.705 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPostRequest-init:andServiceUrlSuffix:>: finished
+2014-06-20 10:48:39.708 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestManager-execute:andHandler:>: started
+2014-06-20 10:48:39.710 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPostRequest-initWithRequest>: started
+2014-06-20 10:48:39.713 MobileSDKArchitectureDemo[4728:60b] [TRACE] <RestManager.RestPostRequest-initWithRequest>: Created rest request url: http://47.168.150.32:8580/rest/version/1/user/gamze3@spidr.com/subscription
+2014-06-20 10:48:39.715 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPostRequest-addHeaderParameters>: started
+2014-06-20 10:48:39.717 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPostRequest-addHeaderParameters>: finished
+2014-06-20 10:48:39.720 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPostRequest-getRestBodyData:>: started
+2014-06-20 10:48:39.723 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPostRequest-getRestBodyData:>: finished
+2014-06-20 10:48:39.725 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPostRequest-initWithRequest>: finished
+2014-06-20 10:48:39.727 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-execute:>: started
+2014-06-20 10:48:39.740 MobileSDKArchitectureDemo[4728:60b] Reachability Flag Status: -R -----l- networkStatusForFlags
+2014-06-20 10:48:39.750 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-execute:>: finished
+2014-06-20 10:48:39.815 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestManager-execute:andHandler:>: finished
+2014-06-20 10:48:40.314 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveResponse:>: started
+2014-06-20 10:48:40.315 MobileSDKArchitectureDemo[4728:60b] [TRACE] <RestManager.RestConnection-connection:didReceiveResponse:>: Received response code : 201
+2014-06-20 10:48:40.317 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveResponse:>: finished
+2014-06-20 10:48:40.318 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveData:>: started
+2014-06-20 10:48:40.320 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveData:>: finished
+2014-06-20 10:48:40.321 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connectionDidFinishLoading:>: started
+2014-06-20 10:48:40.323 MobileSDKArchitectureDemo[4728:60b] [INFO] <RestManager.RestConnection-connectionDidFinishLoading:>: Asynchronous rest request was completed successfully
+2014-06-20 10:48:40.324 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <Registration.RegisterResponseHandler-onFinish:>: started
+2014-06-20 10:48:40.326 MobileSDKArchitectureDemo[4728:60b] [INFO] <Registration.RegisterResponseHandler-onFinish:>: NotificationChannel: /rest/version/1/user/gamze3@spidr.com/websocket/Z2FtemUzLXNwaWRyLmNvbTg2Nzc1NjAwMDk4ODk3Nw -- NotificationID: Z2FtemUzLXNwaWRyLmNvbTg2Nzc1NjAwMDk4ODk3Nw
+2014-06-20 10:48:40.332 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <SDKManager-registrationSucceeded>: started
+2014-06-20 10:48:40.334 MobileSDKArchitectureDemo[4728:60b] [INFO] <SDKManager-registrationSucceeded>: registrationSucceded() :: method invoked
+2014-06-20 10:48:40.336 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-isConnect>: started
+2014-06-20 10:48:40.338 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-connect>: started
+2014-06-20 10:48:40.339 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationComponent-connect>: started
+2014-06-20 10:48:40.341 MobileSDKArchitectureDemo[4728:60b] [INFO] <NotificationEngine.NotificationComponent-connect>: Connection type is websocket
+2014-06-20 10:48:40.342 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.WebSocket-connect>: started
+2014-06-20 10:48:40.343 MobileSDKArchitectureDemo[4728:60b] [TRACE] <NotificationEngine.WebSocket-connect>: Created websocket link : ws://47.168.150.32:8581/rest/version/1/user/gamze3@spidr.com/websocket/Z2FtemUzLXNwaWRyLmNvbTg2Nzc1NjAwMDk4ODk3Nw
+2014-06-20 10:48:40.350 MobileSDKArchitectureDemo[4728:60b] [TRACE] <NotificationEngine.WebSocket-connect>: Websocket Status: 0
+2014-06-20 10:48:40.353 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.WebSocket-connect>: finished
+2014-06-20 10:48:40.355 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationComponent-connect>: finished
+2014-06-20 10:48:40.427 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-connect>: finished
+2014-06-20 10:48:40.428 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <SDKManager-registrationSucceeded>: finished
+2014-06-20 10:48:40.430 MobileSDKArchitectureDemo[4728:60b] [INFO] <Registration.RegisterResponseHandler-onFinish:>: Register request is successfully sent
+2014-06-20 10:48:40.441 MobileSDKArchitectureDemo[4728:60b] registerSucceeded of RegistrationApplication class was called
+2014-06-20 10:48:40.443 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <Registration.RegisterResponseHandler-onFinish:>: finished
+2014-06-20 10:48:40.445 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connectionDidFinishLoading:>: finished
+2014-06-20 10:48:40.448 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.WebSocket-webSocketDidOpen:>: started
+2014-06-20 10:48:40.450 MobileSDKArchitectureDemo[4728:60b] [TRACE] <NotificationEngine.WebSocket-webSocketDidOpen:>: Opening websocket connection is successful
+2014-06-20 10:48:40.451 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.WebSocket-webSocketDidOpen:>: finished
+2014-06-20 10:48:40.454 MobileSDKArchitectureDemo[4728:60b] Reachability Flag Status: -R ------- networkStatusForFlags
+2014-06-20 10:48:40.456 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RegistrationService.Registration-renewRegistration>: started
+2014-06-20 10:48:40.457 MobileSDKArchitectureDemo[4728:60b] [INFO] <RegistrationService.Registration-renewRegistration>: ServiceUrlSuffix : /subscription/Z2FtemUzLXNwaWRyLmNvbTg2Nzc1NjAwMDk4ODk3Nw
+2014-06-20 10:48:40.458 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestRequest-getDefaultHeaders>: started
+2014-06-20 10:48:40.459 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestRequest-getDefaultHeaders>: finished
+2014-06-20 10:48:40.460 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestRequest-init:andMessageBody:andServiceUrlSuffix:>: started
+2014-06-20 10:48:40.461 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPutRequest-init:andMessageBody:andServiceUrlSuffix:>: finished
+2014-06-20 10:48:40.462 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPutRequest-init:andServiceUrlSuffix:>: finished
+2014-06-20 10:48:40.463 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestManager-execute:andHandler:>: started
+2014-06-20 10:48:40.464 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPutRequest-initWithRequest>: started
+2014-06-20 10:48:40.466 MobileSDKArchitectureDemo[4728:60b] [TRACE] <RestManager.RestPutRequest-initWithRequest>: Created rest request url: http://47.168.150.32:8580/rest/version/1/user/gamze3@spidr.com/subscription/Z2FtemUzLXNwaWRyLmNvbTg2Nzc1NjAwMDk4ODk3Nw
+2014-06-20 10:48:40.467 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPutRequest-addHeaderParameters>: started
+2014-06-20 10:48:40.469 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPutRequest-addHeaderParameters>: finished
+2014-06-20 10:48:40.470 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPutRequest-getRestBodyData:>: started
+2014-06-20 10:48:40.472 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPutRequest-getRestBodyData:>: finished
+2014-06-20 10:48:40.474 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPutRequest-initWithRequest>: finished
+2014-06-20 10:48:40.475 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-execute:>: started
+2014-06-20 10:48:40.479 MobileSDKArchitectureDemo[4728:60b] Reachability Flag Status: -R -----l- networkStatusForFlags
+2014-06-20 10:48:40.480 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-execute:>: finished
+2014-06-20 10:48:40.482 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestManager-execute:andHandler:>: finished
+2014-06-20 10:48:40.483 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RegistrationService.Registration-renewRegistration>: finished
+2014-06-20 10:48:40.642 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-init>: started
+2014-06-20 10:48:40.644 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-registerForNotification:>: started
+2014-06-20 10:48:40.645 MobileSDKArchitectureDemo[4728:60b] [TRACE] <NotificationEngine.NotificationEngine-registerForNotification:>: Registered service is : CallService
+2014-06-20 10:48:40.646 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-registerForNotification:>: finished
+2014-06-20 10:48:40.647 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <SDKManager-registerToSDKManager:andEventTypes:>: started
+2014-06-20 10:48:40.648 MobileSDKArchitectureDemo[4728:60b] [INFO] <SDKManager-registerToSDKManager:andEventTypes:>: registerToSDKManager() :: method invoked
+2014-06-20 10:48:40.649 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <SDKManager-registerToSDKManager:andEventTypes:>: finished
+2014-06-20 10:48:40.650 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-init>: finished
+2014-06-20 10:48:40.651 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-setCallApplication:>: started
+2014-06-20 10:48:40.653 MobileSDKArchitectureDemo[4728:60b] -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-0
+2014-06-20 10:48:40.667 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-registerForNotification:>: started
+2014-06-20 10:48:40.669 MobileSDKArchitectureDemo[4728:60b] [TRACE] <NotificationEngine.NotificationEngine-registerForNotification:>: Registered service is : ImService
+2014-06-20 10:48:40.670 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-registerForNotification:>: finished
+2014-06-20 10:48:40.671 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <IMService.IMService-setIMApplication:>: started
+2014-06-20 10:48:40.673 MobileSDKArchitectureDemo[4728:60b] [INFO] <IMService.IMService-setIMApplication:>: IMServiceDelegate's setIMApplication method is invoked
+2014-06-20 10:48:40.675 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <IMService.IMService-setIMApplication:>: finished
+2014-06-20 10:48:40.715 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestRequest-getDefaultHeaders>: started
+2014-06-20 10:48:40.716 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestRequest-getDefaultHeaders>: finished
+2014-06-20 10:48:40.718 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestRequest-init:andHttpParameters:andServiceUrlSuffix:>: started
+2014-06-20 10:48:40.719 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestGetRequest-init:andHttpParameters:andServiceUrlSuffix:>: finished
+2014-06-20 10:48:40.721 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestGetRequest-init:andServiceUrlSuffix:>: finished
+2014-06-20 10:48:40.723 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestManager-executeSynchronous:andHandler:>: started
+2014-06-20 10:48:40.724 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestGetRequest-initWithRequest>: started
+2014-06-20 10:48:40.725 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestGetRequest-addGetParameters>: started
+2014-06-20 10:48:40.726 MobileSDKArchitectureDemo[4728:60b] [TRACE] <RestManager.RestGetRequest-initWithRequest>: Created rest request url: http://47.168.150.32:8580/rest/version/1/user/gamze3@spidr.com/addressbook/
+2014-06-20 10:48:40.727 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestGetRequest-addHeaderParameters>: started
+2014-06-20 10:48:40.728 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestGetRequest-addHeaderParameters>: finished
+2014-06-20 10:48:40.729 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestGetRequest-initWithRequest>: finished
+2014-06-20 10:48:40.730 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-executeSynchronous:>: started
+2014-06-20 10:48:40.733 MobileSDKArchitectureDemo[4728:60b] Reachability Flag Status: -R -----l- networkStatusForFlags
+2014-06-20 10:48:40.920 MobileSDKArchitectureDemo[4728:60b] [INFO] <RestManager.RestConnection-executeSynchronous:>: Synchronous rest request was completed successfully
+2014-06-20 10:48:40.921 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <AddressBookResponseHandler-onFinish:>: started
+2014-06-20 10:48:40.923 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-registerForNotification:>: started
+2014-06-20 10:48:40.924 MobileSDKArchitectureDemo[4728:60b] [TRACE] <NotificationEngine.NotificationEngine-registerForNotification:>: Registered service is : PresenceService
+2014-06-20 10:48:40.925 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-registerForNotification:>: finished
+2014-06-20 10:48:40.926 MobileSDKArchitectureDemo[4728:60b] [INFO] <PresenceService.PresenceService-init>: Presence service registered to notification engine successfully
+2014-06-20 10:48:40.929 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <PresenceService.PresenceService-retrieve:>: started
+2014-06-20 10:48:40.930 MobileSDKArchitectureDemo[4728:60b] [INFO] <PresenceService.PresenceService-retrieve:>: Retrieve list : (
+    "gamze1@spidr.com",
+    "gamze2@spidr.com",
+    "gamze4@spidr.com"
+)
+2014-06-20 10:48:40.931 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestRequest-getDefaultHeaders>: started
+2014-06-20 10:48:40.932 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestRequest-getDefaultHeaders>: finished
+2014-06-20 10:48:40.933 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestRequest-init:andMessageBody:andServiceUrlSuffix:>: started
+2014-06-20 10:48:40.934 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPostRequest-init:andMessageBody:andServiceUrlSuffix:>: finished
+2014-06-20 10:48:40.935 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPostRequest-init:andServiceUrlSuffix:>: finished
+2014-06-20 10:48:40.936 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestManager-execute:andHandler:>: started
+2014-06-20 10:48:40.937 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPostRequest-initWithRequest>: started
+2014-06-20 10:48:40.939 MobileSDKArchitectureDemo[4728:60b] [TRACE] <RestManager.RestPostRequest-initWithRequest>: Created rest request url: http://47.168.150.32:8580/rest/version/1/user/gamze3@spidr.com/presenceWatcher
+2014-06-20 10:48:40.940 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPostRequest-addHeaderParameters>: started
+2014-06-20 10:48:40.941 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPostRequest-addHeaderParameters>: finished
+2014-06-20 10:48:40.942 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPostRequest-getRestBodyData:>: started
+2014-06-20 10:48:40.943 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPostRequest-getRestBodyData:>: finished
+2014-06-20 10:48:40.944 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPostRequest-initWithRequest>: finished
+2014-06-20 10:48:40.945 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-execute:>: started
+2014-06-20 10:48:40.949 MobileSDKArchitectureDemo[4728:60b] Reachability Flag Status: -R -----l- networkStatusForFlags
+2014-06-20 10:48:40.950 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-execute:>: finished
+2014-06-20 10:48:40.954 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestManager-execute:andHandler:>: finished
+2014-06-20 10:48:40.955 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <PresenceService.PresenceService-retrieve:>: finished
+2014-06-20 10:48:40.957 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <AddressBookResponseHandler-onFinish:>: finished
+2014-06-20 10:48:40.958 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-executeSynchronous:>: finished
+2014-06-20 10:48:40.959 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestManager-executeSynchronous:andHandler:>: finished
+2014-06-20 10:48:41.323 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveResponse:>: started
+2014-06-20 10:48:41.328 MobileSDKArchitectureDemo[4728:60b] [TRACE] <RestManager.RestConnection-connection:didReceiveResponse:>: Received response code : 200
+2014-06-20 10:48:41.330 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveResponse:>: finished
+2014-06-20 10:48:41.331 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveData:>: started
+2014-06-20 10:48:41.335 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveData:>: finished
+2014-06-20 10:48:41.339 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connectionDidFinishLoading:>: started
+2014-06-20 10:48:41.341 MobileSDKArchitectureDemo[4728:60b] [INFO] <RestManager.RestConnection-connectionDidFinishLoading:>: Asynchronous rest request was completed successfully
+2014-06-20 10:48:41.343 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <Registration.RenewRegistationResponseHandler.h-onFinish:>: started
+2014-06-20 10:48:41.348 MobileSDKArchitectureDemo[4728:60b] [INFO] <Registration.RenewRegistationResponseHandler.h-onFinish:>: NotificationChannel: /rest/version/1/user/gamze3@spidr.com/websocket/Z2FtemUzLXNwaWRyLmNvbTg2Nzc1NjAwMDk4ODk3Nw -- NotificationID: Z2FtemUzLXNwaWRyLmNvbTg2Nzc1NjAwMDk4ODk3Nw
+2014-06-20 10:48:41.350 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <SDKManager-registrationSucceeded>: started
+2014-06-20 10:48:41.353 MobileSDKArchitectureDemo[4728:60b] [INFO] <SDKManager-registrationSucceeded>: registrationSucceded() :: method invoked
+2014-06-20 10:48:41.354 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-isConnect>: started
+2014-06-20 10:48:41.358 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <SDKManager-registrationSucceeded>: finished
+2014-06-20 10:48:41.361 MobileSDKArchitectureDemo[4728:60b] [WARNING] <Registration.RenewRegistationResponseHandler.h-onFinish:>: Renewregister request is partially successful Registered services are: (
+    RestfulClient,
+    CallControl,
+    Presence,
+    CallLog,
+    Directory,
+    ClickToCall,
+    CallMe,
+    IM,
+    CallDisposition,
+    Route,
+    CallDisplay,
+    AddressBook
+)
+2014-06-20 10:48:41.364 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <Registration.RenewRegistationResponseHandler.h-onFinish:>: finished
+2014-06-20 10:48:41.368 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connectionDidFinishLoading:>: finished
+2014-06-20 10:48:41.371 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveResponse:>: started
+2014-06-20 10:48:41.374 MobileSDKArchitectureDemo[4728:60b] [TRACE] <RestManager.RestConnection-connection:didReceiveResponse:>: Received response code : 200
+2014-06-20 10:48:41.376 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveResponse:>: finished
+2014-06-20 10:48:41.380 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveData:>: started
+2014-06-20 10:48:41.382 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveData:>: finished
+2014-06-20 10:48:41.384 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connectionDidFinishLoading:>: started
+2014-06-20 10:48:41.389 MobileSDKArchitectureDemo[4728:60b] [INFO] <RestManager.RestConnection-connectionDidFinishLoading:>: Asynchronous rest request was completed successfully
+2014-06-20 10:48:41.390 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <PresenceService.PresenceWatcherResponseHandler-onFinish:>: started
+2014-06-20 10:48:41.391 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connectionDidFinishLoading:>: finished
+2014-06-20 10:48:41.392 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.WebSocket-webSocket:didReceiveMessage:>: started
+2014-06-20 10:48:41.396 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.WebSocket-webSocket:didReceiveMessage:>: started
+2014-06-20 10:48:41.399 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationComponent-dataReceivedFromSocket:>: started
+2014-06-20 10:48:41.400 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-notificationReceived:>: started
+2014-06-20 10:48:41.402 MobileSDKArchitectureDemo[4728:60b] [TRACE] <NotificationEngine.NotificationEngine-notificationReceived:>: Received notificationMessage eventType: presenceWatcher
+2014-06-20 10:48:41.403 MobileSDKArchitectureDemo[4728:60b] [TRACE] <NotificationEngine.NotificationEngine-notificationReceived:>: Received notificationMessage parameters: {
+    presenceWatcherNotificationParams =     {
+        activity = unknown;
+        name = "gamze2@spidr.com";
+        status = open;
+        type = A2;
+    };
+}
+2014-06-20 10:48:41.405 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-notificationReceived:>: started
+2014-06-20 10:48:41.406 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-notificationReceived:>: finished
+2014-06-20 10:48:41.407 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <IMService.IMService-notificationReceived:>: started
+2014-06-20 10:48:41.412 MobileSDKArchitectureDemo[4728:60b] [INFO] <IMService.IMService-notificationReceived:>: NotificationHandleDelegate's notificationReceived method is invoked
+2014-06-20 10:48:41.414 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <IMService.IMService-notificationReceived:>: finished
+2014-06-20 10:48:41.417 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <PresenceService.PresenceService-notificationReceived:>: started
+2014-06-20 10:48:41.421 MobileSDKArchitectureDemo[4728:60b] [INFO] <PresenceService.PresenceService-notificationReceived:>: Incoming notification event type: presenceWatcher
+2014-06-20 10:48:41.423 MobileSDKArchitectureDemo[4728:60b] [INFO] <PresenceService.PresenceService-notificationReceived:>: Incoming presence name: gamze2@spidr.com -- state: open -- activity: unknown
+2014-06-20 10:48:41.428 MobileSDKArchitectureDemo[4728:60b] ConcactList Presence State changed
+2014-06-20 10:48:41.431 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <PresenceService.PresenceService-notificationReceived:>: finished
+2014-06-20 10:48:41.432 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-notificationReceived:>: finished
+2014-06-20 10:48:41.433 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationComponent-dataReceivedFromSocket:>: finished
+2014-06-20 10:48:41.434 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.WebSocket-webSocket:didReceiveMessage:>: started
+2014-06-20 10:48:41.436 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.WebSocket-webSocket:didReceiveMessage:>: started
+2014-06-20 10:48:41.437 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationComponent-dataReceivedFromSocket:>: started
+2014-06-20 10:48:41.438 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-notificationReceived:>: started
+2014-06-20 10:48:41.439 MobileSDKArchitectureDemo[4728:60b] [TRACE] <NotificationEngine.NotificationEngine-notificationReceived:>: Received notificationMessage eventType: presenceWatcher
+2014-06-20 10:48:41.444 MobileSDKArchitectureDemo[4728:60b] [TRACE] <NotificationEngine.NotificationEngine-notificationReceived:>: Received notificationMessage parameters: {
+    presenceWatcherNotificationParams =     {
+        activity = unknown;
+        name = "gamze1@spidr.com";
+        status = open;
+        type = A2;
+    };
+}
+2014-06-20 10:48:41.445 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-notificationReceived:>: started
+2014-06-20 10:48:41.447 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-notificationReceived:>: finished
+2014-06-20 10:48:41.448 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <IMService.IMService-notificationReceived:>: started
+2014-06-20 10:48:41.450 MobileSDKArchitectureDemo[4728:60b] [INFO] <IMService.IMService-notificationReceived:>: NotificationHandleDelegate's notificationReceived method is invoked
+2014-06-20 10:48:41.451 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <IMService.IMService-notificationReceived:>: finished
+2014-06-20 10:48:41.452 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <PresenceService.PresenceService-notificationReceived:>: started
+2014-06-20 10:48:41.456 MobileSDKArchitectureDemo[4728:60b] [INFO] <PresenceService.PresenceService-notificationReceived:>: Incoming notification event type: presenceWatcher
+2014-06-20 10:48:41.457 MobileSDKArchitectureDemo[4728:60b] [INFO] <PresenceService.PresenceService-notificationReceived:>: Incoming presence name: gamze1@spidr.com -- state: open -- activity: unknown
+2014-06-20 10:48:41.460 MobileSDKArchitectureDemo[4728:60b] ConcactList Presence State changed
+2014-06-20 10:48:41.461 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <PresenceService.PresenceService-notificationReceived:>: finished
+2014-06-20 10:48:41.462 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-notificationReceived:>: finished
+2014-06-20 10:48:41.463 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationComponent-dataReceivedFromSocket:>: finished
+2014-06-20 10:48:41.465 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.WebSocket-webSocket:didReceiveMessage:>: started
+2014-06-20 10:48:41.466 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.WebSocket-webSocket:didReceiveMessage:>: started
+2014-06-20 10:48:41.468 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationComponent-dataReceivedFromSocket:>: started
+2014-06-20 10:48:41.472 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-notificationReceived:>: started
+2014-06-20 10:48:41.473 MobileSDKArchitectureDemo[4728:60b] [TRACE] <NotificationEngine.NotificationEngine-notificationReceived:>: Received notificationMessage eventType: presenceWatcher
+2014-06-20 10:48:41.476 MobileSDKArchitectureDemo[4728:60b] [TRACE] <NotificationEngine.NotificationEngine-notificationReceived:>: Received notificationMessage parameters: {
+    presenceWatcherNotificationParams =     {
+        activity = unknown;
+        name = "gamze4@spidr.com";
+        status = open;
+        type = A2;
+    };
+}
+2014-06-20 10:48:41.478 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-notificationReceived:>: started
+2014-06-20 10:48:41.480 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-notificationReceived:>: finished
+2014-06-20 10:48:41.482 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <IMService.IMService-notificationReceived:>: started
+2014-06-20 10:48:41.483 MobileSDKArchitectureDemo[4728:60b] [INFO] <IMService.IMService-notificationReceived:>: NotificationHandleDelegate's notificationReceived method is invoked
+2014-06-20 10:48:41.484 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <IMService.IMService-notificationReceived:>: finished
+2014-06-20 10:48:41.485 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <PresenceService.PresenceService-notificationReceived:>: started
+2014-06-20 10:48:41.486 MobileSDKArchitectureDemo[4728:60b] [INFO] <PresenceService.PresenceService-notificationReceived:>: Incoming notification event type: presenceWatcher
+2014-06-20 10:48:41.488 MobileSDKArchitectureDemo[4728:60b] [INFO] <PresenceService.PresenceService-notificationReceived:>: Incoming presence name: gamze4@spidr.com -- state: open -- activity: unknown
+2014-06-20 10:48:41.489 MobileSDKArchitectureDemo[4728:60b] ConcactList Presence State changed
+2014-06-20 10:48:41.493 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <PresenceService.PresenceService-notificationReceived:>: finished
+2014-06-20 10:48:41.496 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-notificationReceived:>: finished
+2014-06-20 10:48:41.498 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationComponent-dataReceivedFromSocket:>: finished
+2014-06-20 10:49:18.441 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.WebSocket-webSocket:didReceiveMessage:>: started
+2014-06-20 10:49:18.443 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.WebSocket-webSocket:didReceiveMessage:>: started
+2014-06-20 10:49:18.444 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationComponent-dataReceivedFromSocket:>: started
+2014-06-20 10:49:18.445 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-notificationReceived:>: started
+2014-06-20 10:49:18.447 MobileSDKArchitectureDemo[4728:60b] [TRACE] <NotificationEngine.NotificationEngine-notificationReceived:>: Received notificationMessage eventType: call
+2014-06-20 10:49:18.448 MobileSDKArchitectureDemo[4728:60b] [TRACE] <NotificationEngine.NotificationEngine-notificationReceived:>: Received notificationMessage parameters: {
+    callDispositionParams =     {
+        actions = "reject|forward";
+        sessionData = "(77157156_0efbfc5e_1833f15a-67c9-4c24-b5fb-6d20bd6bc010:2144048b644640e43d66069a790a875cdfed74b@47.168.116.57:19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$(19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$d3ZtMzItYXNpcGMtMQ%3D%3D%0A";
+    };
+    callNotificationParams =     {
+        calleeDisplayNumber = gamze3;
+        callerDisplayNumber = gamze1;
+        callerName = "gamze1 erdogan1";
+    };
+    sessionParams =     {
+        actions = "answer|reject|forward";
+        conversation = "brdplayed=yes";
+        sdp = "v=0
+\no=- 18121 18121 IN IP4 47.168.138.148
+\ns=media server session
+\nt=0 0
+\na=ice-lite
+\nm=audio 47458 RTP/SAVPF 0 8 18 13 96
+\nc=IN IP4 47.168.150.32
+\na=rtpmap:0 PCMU/8000
+\na=rtpmap:8 PCMA/8000
+\na=rtpmap:18 G729/8000
+\na=fmtp:18 annexb=no
+\na=rtcp-xr
+\na=rtpmap:13 CN/8000
+\na=rtpmap:96 telephone-event/8000
+\na=fmtp:96 0-15
+\na=sendrecv
+\na=fingerprint:sha-256 FF:3B:E7:A4:A3:C5:5B:25:D5:4E:5B:E2:24:2C:35:47:51:26:79:D1:E0:FF:51:8A:0C:50:C7:4D:92:94:58:14
+\na=setup:actpass
+\na=ice-pwd:kEU0M9eU+ZYLJPbAKhRTEiR42o6iblVt
+\na=ice-ufrag:LmKuU1EsVpxtyenkpuFc6dgo2lKFOrNo
+\na=crypto:1 AES_CM_128_HMAC_SHA1_80 inline:5eU6ilBG550DtrrlINiRv9QpnsMclTFl7s7zWiDd
+\na=rtcp:47459 IN IP4 47.168.150.32
+\na=candidate:1 1 udp 2113937151 47.168.150.32 47458 typ host generation 0
+\na=candidate:1 2 udp 2113937151 47.168.150.32 47459 typ host generation 0
+\nm=video 61458 RTP/SAVPF 111 104 34
+\nc=IN IP4 47.168.150.32
+\nb=AS:2000
+\na=rtpmap:111 VP8/90000
+\na=rtpmap:104 H264/90000
+\na=fmtp:104 profile-level-id=428016; parameter-add=0
+\na=rtpmap:34 H263/90000
+\na=fmtp:34 cif=1
+\na=rtcp-fb:* nack pli
+\na=recvonly
+\na=fingerprint:sha-256 E7:C6:0B:75:4D:84:0F:B5:6E:E0:51:D8:1F:2C:AD:24:59:78:C0:47:4D:2A:CC:77:5D:32:C9:AB:AE:F4:AD:DD
+\na=setup:actpass
+\na=ice-pwd:Y9BUrs9S8tV3g90yQZ2NcvhxWKDVG/TO
+\na=ice-ufrag:i6b49ef9xHV9QjTRCUYB5E1HwYhSjnaW
+\na=crypto:1 AES_CM_128_HMAC_SHA1_80 inline:fIm5lpCL1d6PjxFxPolVM5W2Hmjt/oILc9XdYiHY
+\na=rtcp:61459 IN IP4 47.168.150.32
+\na=candidate:1 1 udp 2113937151 47.168.150.32 61458 typ host generation 0
+\na=candidate:1 2 udp 2113937151 47.168.150.32 61459 typ host generation 0
+\n";
+        sessionData = "(77157156_0efbfc5e_1833f15a-67c9-4c24-b5fb-6d20bd6bc010:2144048b644640e43d66069a790a875cdfed74b@47.168.116.57:19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$(19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$d3ZtMzItYXNpcGMtMQ%3D%3D%0A";
+    };
+}
+2014-06-20 10:49:18.453 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-notificationReceived:>: started
+2014-06-20 10:49:18.456 MobileSDKArchitectureDemo[4728:60b] [INFO] <Utils-fixFIRandNACKLines:>:  Fixing FIR and NACK lines
+2014-06-20 10:49:18.459 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.Call-init>: finished
+2014-06-20 10:49:18.460 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-setCallId:>: started
+2014-06-20 10:49:18.462 MobileSDKArchitectureDemo[4728:60b] [WARNING] <CallService.IncomingCall-setCallId:>: Setting callid. But WebRTCCall Object is null.
+2014-06-20 10:49:18.464 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-setCallId:>: finished
+2014-06-20 10:49:18.466 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-initWithCallId:remoteSDP:>: finished
+2014-06-20 10:49:18.472 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-setCallApplication:>: started
+2014-06-20 10:49:18.950 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-notificationReceived:>: finished
+2014-06-20 10:49:18.953 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <IMService.IMService-notificationReceived:>: started
+2014-06-20 10:49:18.954 MobileSDKArchitectureDemo[4728:60b] [INFO] <IMService.IMService-notificationReceived:>: NotificationHandleDelegate's notificationReceived method is invoked
+2014-06-20 10:49:18.955 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <IMService.IMService-notificationReceived:>: finished
+2014-06-20 10:49:18.956 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <PresenceService.PresenceService-notificationReceived:>: started
+2014-06-20 10:49:18.957 MobileSDKArchitectureDemo[4728:60b] [INFO] <PresenceService.PresenceService-notificationReceived:>: Incoming notification event type: call
+2014-06-20 10:49:18.958 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <PresenceService.PresenceService-notificationReceived:>: finished
+2014-06-20 10:49:18.959 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-notificationReceived:>: finished
+2014-06-20 10:49:18.960 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationComponent-dataReceivedFromSocket:>: finished
+2014-06-20 10:49:20.570 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-acceptCall:>: started
+2014-06-20 10:49:20.574 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-createIncomingCall:>: started
+2014-06-20 10:49:20.576 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <PrivacyManager-requestMediaTypeAccess:>: started
+2014-06-20 10:49:20.578 MobileSDKArchitectureDemo[4728:60b] [INFO] <PrivacyManager-requestMediaTypeAccess:>: Microphone is already enabled
+2014-06-20 10:49:20.579 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <PrivacyManager-requestMediaTypeAccess:>: finished
+2014-06-20 10:49:20.581 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <PrivacyManager-requestMediaTypeAccess:>: started
+2014-06-20 10:49:20.585 MobileSDKArchitectureDemo[4728:60b] [INFO] <PrivacyManager-requestMediaTypeAccess:>: Camera is already enabled
+2014-06-20 10:49:20.587 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <PrivacyManager-requestMediaTypeAccess:>: finished
+2014-06-20 10:49:20.591 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCallManager-addICEServer:userName:password:>: started
+2014-06-20 10:49:20.592 MobileSDKArchitectureDemo[4728:60b] [INFO] <WebRTC.WebRTCCallManager-addICEServer:userName:password:>:  Adding ICE Server ...
+2014-06-20 10:49:20.599 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCallManager-addICEServer:userName:password:>: finished
+WebRtc VoiceEngine codecs:
+ISAC/16000/1 (103)
+PCMU/8000/1 (0)
+PCMA/8000/1 (8)
+Warning(webrtcvoiceengine.cc:476): Unexpected codec: PCMU/8000/2 (110)
+Warning(webrtcvoiceengine.cc:476): Unexpected codec: PCMA/8000/2 (118)
+ILBC/8000/1 (102)
+G722/16000/1 (9)
+Warning(webrtcvoiceengine.cc:476): Unexpected codec: G722/16000/2 (119)
+opus/48000/2 (111)
+CN/8000/1 (13)
+CN/16000/1 (105)
+CN/32000/1 (106)
+telephone-event/8000/1 (126)
+red/8000/1 (127)
+WebRtcVideoEngine::WebRtcVideoEngine
+webrtc: Thread with name:Trace started 
+webrtc: (vie_impl.cc:133): SetTraceFilter: filter: 8206
+webrtc: (vie_impl.cc:138): SetTraceCallback: 
+WebRtcVoiceEngine::Init
+webrtc: Thread with name:ProcessThread started 
+webrtc: CheckPlatform
+webrtc: current platform is IOS
+webrtc: CreatePlatformSpecificObjects
+webrtc: output: kPlatformDefaultAudio
+webrtc: iPhone Audio APIs will be utilized
+webrtc: AttachAudioBuffer
+webrtc:   OS info: iOS
+webrtc: Thread with name:CaptureWorkerThread started 
+webrtc: output: available=0
+webrtc: output: available=0
+webrtc: TransmitMixer::SetAudioProcessingModule(audioProcessingModule=0x16d3fa10)
+webrtc: OutputMixer::SetAudioProcessingModule(audioProcessingModule=0x16d3fa10)
+WebRtc VoiceEngine Version:
+VoiceEngine 4.1.0
+Build: Jun 13 2014 11:23:33 ?
+Applying audio options: AudioOptions {aec: false, agc: false, ns: true, hf: true, swap: false, typing: false, conference: false, agc_delta: 0, experimental_agc: false, experimental_aec: false, experimental_ns: false, aec_dump: false, }
+High pass filter enabled? 1
+Stereo swapping enabled? 0
+Typing detection is enabled? 0
+Error(webrtcvideoengine.cc:1507): webrtc: (voe_audio_processing_impl.cc:1001): SetTypingDetectionStatus: not supported
+Warning(webrtcvoiceengine.cc:846): SetTypingDetectionStatus(0) failed, err=8003
+Adjust agc delta is 0
+Adjusting AGC level from default -3dB to -3dB
+Aec dump is enabled? 0
+Experimental aec is 0
+WebRtc VoiceEngine codecs:
+opus/48000/2 (111)
+ISAC/16000/1 (103)
+G722/16000/1 (9)
+ILBC/8000/1 (102)
+PCMU/8000/1 (0)
+PCMA/8000/1 (8)
+CN/32000/1 (106)
+CN/16000/1 (105)
+CN/8000/1 (13)
+red/8000/1 (127)
+telephone-event/8000/1 (126)
+WebRtcVoiceEngine::Init Done!
+WebRtcVideoEngine::Init
+WebRtcVideoEngine::InitVideoEngine
+WebRtc VideoEngine Version:
+VideoEngine 3.54.0
+Build: Jun 13 2014 11:23:39 ?
+webrtc: (vie_base_impl.cc:68): SetVoiceEngine: SetVoiceEngine
+VideoEngine Init done
+webrtc: (vie_render_impl.cc:64): RegisterVideoRenderModule: 
+Applying audio options: AudioOptions {aec: false, agc: false, ns: true, hf: true, swap: false, typing: false, conference: false, agc_delta: 0, experimental_agc: false, experimental_aec: false, experimental_ns: false, aec_dump: false, }
+High pass filter enabled? 1
+Stereo swapping enabled? 0
+Typing detection is enabled? 0
+Warning(webrtcvoiceengine.cc:846): SetTypingDetectionStatus(0) failed, err=8003
+Adjust agc delta is 0
+Adjusting AGC level from default -3dB to -3dB
+Aec dump is enabled? 0
+Experimental aec is 0
+Error(webrtcvideoengine.cc:1507): webrtc: (voe_audio_processing_impl.cc:1001): SetTypingDetectionStatus: not supported
+2014-06-20 10:49:20.704 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCallManager-setMediaConstraints>: started
+2014-06-20 10:49:20.708 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCallManager-setMediaConstraints>: finished
+2014-06-20 10:49:20.709 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-getCallId>: started
+2014-06-20 10:49:20.710 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-getCallId>: finished
+2014-06-20 10:49:20.711 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCallManager-incomingOffer:remoteSDPStr:videoEnabled:localVideoView:remoteVideoView:>: started
+2014-06-20 10:49:20.712 MobileSDKArchitectureDemo[4728:60b] [INFO] <WebRTC.WebRTCCallManager-incomingOffer:remoteSDPStr:videoEnabled:localVideoView:remoteVideoView:>: An offer is received
+2014-06-20 10:49:20.714 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCallManager-createWebRTCCall:videoEnabled:localVideoView:remoteVideoView:>: started
+2014-06-20 10:49:20.716 MobileSDKArchitectureDemo[4728:60b] [INFO] <WebRTC.WebRTCCallManager-createWebRTCCall:videoEnabled:localVideoView:remoteVideoView:>: Initiating call from WebRTC
+2014-06-20 10:49:20.718 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-setLocalView>: started
+2014-06-20 10:49:20.896 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-setLocalView>: finished
+2014-06-20 10:49:20.897 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-setRemoteView>: started
+2014-06-20 10:49:20.917 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-setRemoteView>: finished
+2014-06-20 10:49:20.919 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-setCallState:>: started
+2014-06-20 10:49:20.920 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-setCallState:>: finished
+2014-06-20 10:49:20.927 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-addAudioTrack>: started
+2014-06-20 10:49:20.928 MobileSDKArchitectureDemo[4728:60b] [INFO] <WebRTC.WebRTCCall-addAudioTrack>: Adding Audio to stream ...
+2014-06-20 10:49:20.930 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-setHandsfree:>: started
+2014-06-20 10:49:21.234 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-setHandsfree:>: finished
+2014-06-20 10:49:21.236 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-addAudioTrack>: finished
+2014-06-20 10:49:21.237 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-addVideoTrack>: started
+2014-06-20 10:49:21.239 MobileSDKArchitectureDemo[4728:60b] [INFO] <WebRTC.WebRTCCall-addVideoTrack>: Adding Video to stream ...
+2014-06-20 10:49:21.241 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCallManager-getVideoSource>: started
+2014-06-20 10:49:21.242 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCallManager-getVideoCapturer>: started
+Error(webrtcvideoengine.cc:1507): webrtc: NumberOfCapabilities is not supported on the iOS platform.
+Created VideoCapturer for Front Camera
+2014-06-20 10:49:21.306 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCallManager-getVideoCapturer>: finished
+Failed to find best capture format, fall back to the requested format I420 640x480x30
+VAdapt input interval changed from 0 to 33333333
+Camera 'com.apple.avfoundation.avcapturedevice.built-in_video:1' started with format I420 640x480x30, elapsed time 0 ms
+2014-06-20 10:49:21.310 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCallManager-getVideoSource>: finished
+2014-06-20 10:49:21.316 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-addVideoTrack>: finished
+2014-06-20 10:49:21.321 MobileSDKArchitectureDemo[4728:7d07] [WARNING] <WebRTC.PCObserver-peerConnectionOnRenegotiationNeeded:>: peerConnectionOnRenegotiationNeeded 
+2014-06-20 10:49:21.323 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCallManager-createWebRTCCall:videoEnabled:localVideoView:remoteVideoView:>: finished
+2014-06-20 10:49:21.325 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-setRemoteDescription:>: started
+2014-06-20 10:49:21.326 MobileSDKArchitectureDemo[4728:60b] [INFO] <WebRTC.WebRTCCall-setRemoteDescription:>: Setting Remote Description to:
+ v=0
+
+o=- 18121 18121 IN IP4 47.168.138.148
+
+s=media server session
+
+t=0 0
+
+a=ice-lite
+
+m=audio 47458 RTP/SAVPF 0 8 18 13 96
+
+c=IN IP4 47.168.150.32
+
+a=rtpmap:0 PCMU/8000
+
+a=rtpmap:8 PCMA/8000
+
+a=rtpmap:18 G729/8000
+
+a=fmtp:18 annexb=no
+
+a=rtcp-xr
+
+a=rtpmap:13 CN/8000
+
+a=rtpmap:96 telephone-event/8000
+
+a=fmtp:96 0-15
+
+a=sendrecv
+
+a=fingerprint:sha-256 FF:3B:E7:A4:A3:C5:5B:25:D5:4E:5B:E2:24:2C:35:47:51:26:79:D1:E0:FF:51:8A:0C:50:C7:4D:92:94:58:14
+
+a=setup:actpass
+
+a=ice-pwd:kEU0M9eU+ZYLJPbAKhRTEiR42o6iblVt
+
+a=ice-ufrag:LmKuU1EsVpxtyenkpuFc6dgo2lKFOrNo
+
+a=crypto:1 AES_CM_128_HMAC_SHA1_80 inline:5eU6ilBG550DtrrlINiRv9QpnsMclTFl7s7zWiDd
+
+a=rtcp:47459 IN IP4 47.168.150.32
+
+a=candidate:1 1 udp 2113937151 47.168.150.32 47458 typ host generation 0
+
+a=candidate:1 2 udp 2113937151 47.168.150.32 47459 typ host generation 0
+
+m=video 61458 RTP/SAVPF 111 104 34
+
+c=IN IP4 47.168.150.32
+
+b=AS:2000
+
+a=rtpmap:111 VP8/90000
+
+a=rtpmap:104 H264/90000
+
+a=fmtp:104 profile-level-id=428016; parameter-add=0
+
+a=rtpmap:34 H263/90000
+
+a=fmtp:34 cif=1
+
+a=rtcp-fb:* ccm fir
+
+a=rtcp-fb:* nack
+
+a=rtcp-fb:* nack pli
+
+a=recvonly
+
+a=fingerprint:sha-256 E7:C6:0B:75:4D:84:0F:B5:6E:E0:51:D8:1F:2C:AD:24:59:78:C0:47:4D:2A:CC:77:5D:32:C9:AB:AE:F4:AD:DD
+
+a=setup:actpass
+
+a=ice-pwd:Y9BUrs9S8tV3g90yQZ2NcvhxWKDVG/TO
+
+a=ice-ufrag:i6b49ef9xHV9QjTRCUYB5E1HwYhSjnaW
+
+a=crypto:1 AES_CM_128_HMAC_SHA1_80 inline:fIm5lpCL1d6PjxFxPolVM5W2Hmjt/oILc9XdYiHY
+
+a=rtcp:61459 IN IP4 47.168.150.32
+
+a=candidate:1 1 udp 2113937151 47.168.150.32 61458 typ host generation 0
+
+a=candidate:1 2 udp 2113937151 47.168.150.32 61459 typ host generation 0
+
+2014-06-20 10:49:21.332 MobileSDKArchitectureDemo[4728:60b] [INFO] <Utils-preferCodec:codec:>:  Preferring PCMA/8000 codec
+Ignored line: c=IN IP4 47.168.150.32
+Ignored line: c=IN IP4 47.168.150.32
+Created channel for audio
+Setting voice channel options: AudioOptions {}
+Set voice channel options.  Current options: AudioOptions {}
+webrtc: (remote_bitrate_estimator_single_stream.cc:239): RemoteBitrateEstimatorFactory: Instantiating.
+webrtc: (vie_base_impl.cc:190): Video channel created: 0
+webrtc: (vie_network_impl.cc:74): RegisterSendTransport: channel: 0
+webrtc: (vie_network_impl.cc:137): SetMTU: channel: 0 mtu: 1200
+webrtc: (vie_rtp_rtcp_impl.cc:261): SetRTCPStatus: channel: 0 mode: 1
+webrtc: (vie_rtp_rtcp_impl.cc:512): SetKeyFrameRequestMethod: channel: 0 method: 1
+webrtc: (vie_rtp_rtcp_impl.cc:379): SetNACKStatus: channel: 0 on
+Warning(webrtcvideoengine.cc:1507): webrtc: (rtp_packet_history.cc:48): Purging packet history in order to re-set status.
+NACK enabled for channel 0
+webrtc: (vie_base_impl.cc:234): ConnectAudioChannel: ConnectAudioChannel, video channel 0, audio channel 0
+webrtc: (vie_rtp_rtcp_impl.cc:549): SetRembStatus: channel: 0 sender: off receiver: off
+webrtc: (vie_rtp_rtcp_impl.cc:581): SetReceiveTimestampOffsetStatus: channel: 0enable: off id: 0
+webrtc: (vie_rtp_rtcp_impl.cc:618): SetReceiveAbsoluteSendTimeStatus: channel: 0enable: off id: 0
+webrtc: (vie_image_process_impl.cc:210): EnableColorEnhancement: video_channel: 0 enable: off
+webrtc: (vie_codec_impl.cc:490): RegisterDecoderObserver for channel 0
+webrtc: (vie_capture_impl.cc:106): External capture device allocated: 4097
+webrtc: (vie_capture_impl.cc:139): Connect capture id 4097 to channel 0
+webrtc: (vie_codec_impl.cc:457): RegisterEncoderObserver for channel 0
+webrtc: (vie_rtp_rtcp_impl.cc:562): SetSendTimestampOffsetStatus: channel: 0enable: off id: 0
+webrtc: (vie_rtp_rtcp_impl.cc:599): SetSendAbsoluteSendTimeStatus: channel: 0enable: off id: 0
+webrtc: (vie_rtp_rtcp_impl.cc:549): SetRembStatus: channel: 0 sender: off receiver: off
+webrtc: (vie_rtp_rtcp_impl.cc:379): SetNACKStatus: channel: 0 on
+Warning(webrtcvideoengine.cc:1507): webrtc: (rtp_packet_history.cc:48): Purging packet history in order to re-set status.
+NACK enabled for channel 0
+webrtc: (vie_base_impl.cc:324): StartReceive: StartReceive 0
+Created channel for video
+Improved WIFI BWE called.
+webrtc: (vie_network_impl.cc:166): SetBandwidthEstimationConfig: channel: 0
+webrtc: (remote_bitrate_estimator_single_stream.cc:239): RemoteBitrateEstimatorFactory: Instantiating.
+Session:7698247037890405243 Old state:STATE_INIT New state:STATE_RECEIVEDINITIATE Type:urn:xmpp:jingle:apps:rtp:1 Transport:http://www.google.com/transport/p2p
+2014-06-20 10:49:21.411 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:signalingStateChanged:>: signalingStateChanged type is 3
+Setting remote voice description
+WebRtcVoiceMediaChanne::SetSendBandwidth.
+WebRtcVoiceMediaChannel::SetSendBandwidthInternal.
+The send codec has not been set up yet. The send bandwidth setting will be applied later.
+Setting voice channel options: AudioOptions {}
+Set voice channel options.  Current options: AudioOptions {}
+Changing voice state, recv=0 send=0
+Setting remote video description
+Warning(webrtcvideoengine.cc:1710): Unknown codec H264
+Warning(webrtcvideoengine.cc:1710): Unknown codec H263
+webrtc: (vie_codec_impl.cc:138): SetSendCodec for channel 0
+webrtc: (vie_codec_impl.cc:31): CodecType 0, pl_type 111, resolution 1280 x 720, start br 300, min br 50, max br 2000, max fps 30, max qp 56, number of streams 0
+webrtc: (vie_codec_impl.cc:43): VP8 specific settings
+webrtc: (vie_codec_impl.cc:44): pictureLossIndicationOn 0, feedbackModeOn 0, complexity 0, resilience 0, numberOfTemporalLayers 1, keyFrameinterval 3000
+SetSendCodecs() : selected video codec VP8/1280x720x30fps@2000kbps (min=50kbps, start=300kbps)
+Video max quantization: 56
+VP8 number of temporal layers: 1
+VP8 options : picture loss indication = 0, feedback mode = 0, complexity = normal, resilience = off, denoising = 0, error concealment = 0, automatic resize = 0, frame dropping = 1, key frame interval = 3000
+WebRtcVideoMediaChannel::SetMaxSendBandwidth
+SetMaxSendBandwidth() : selected video codec VP8/1280x720x30fps@2000kbps (min=50kbps, start=300kbps)
+Video max quantization: 56
+VP8 number of temporal layers: 1
+VP8 options : picture loss indication = 0, feedback mode = 0, complexity = normal, resilience = off, denoising = 0, error concealment = 0, automatic resize = 0, frame dropping = 1, key frame interval = 3000
+Reset send codec needed is enabled? 0
+Buffer latency is 0
+webrtc: (vie_rtp_rtcp_impl.cc:465): SetSenderBufferingMode: channel: 0 target_delay_ms: 0
+Warning(webrtcvideoengine.cc:1507): webrtc: (rtp_packet_history.cc:48): Purging packet history in order to re-set status.
+webrtc: (vie_rtp_rtcp_impl.cc:492): SetReceiverBufferingMode: channel: 0 target_delay_ms: 0
+Changing video state, recv=0 send=0
+Warning(webrtcvoiceengine.cc:2845): SetOutputVolumePan(0, 1, 1) failed, err=8040
+Error(webrtcvideoengine.cc:1507): webrtc: SetOutputVolumePan() stereo playout not supported (error=8040)
+SetOutputScaling to left=1 right=1 for channel 0 and ssrc 0
+2014-06-20 10:49:21.446 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.PCObserver-peerConnection:addedStream:>: started
+2014-06-20 10:49:21.447 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.WebRTCCall-onAddStream:>: started
+2014-06-20 10:49:21.448 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.WebRTCCall-onAddStream:>: Remote Peer Added Stream
+2014-06-20 10:49:21.452 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.WebRTCCall-onAddStream:>: finished
+2014-06-20 10:49:21.454 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.PCObserver-peerConnection:addedStream:>: finished
+2014-06-20 10:49:21.455 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.SDPObserver-peerConnection:didSetSessionDescriptionWithError:>: started
+2014-06-20 10:49:21.456 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.SDPObserver-peerConnection:didSetSessionDescriptionWithError:>: SDP is set Successfully
+2014-06-20 10:49:21.457 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.WebRTCCall-onSetSDPSuccess>: started
+2014-06-20 10:49:21.458 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.WebRTCCall-callCreateFSM>: started
+Local and Remote descriptions must be applied to get SSL Role of the session.
+2014-06-20 10:49:21.459 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-setRemoteDescription:>: finished
+Data is not available in the offer.
+2014-06-20 10:49:21.461 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.WebRTCCall-callCreateFSM>: finished
+2014-06-20 10:49:21.461 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCallManager-incomingOffer:remoteSDPStr:videoEnabled:localVideoView:remoteVideoView:>: finished
+2014-06-20 10:49:21.463 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.WebRTCCall-onSetSDPSuccess>: finished
+2014-06-20 10:49:21.464 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.SDPObserver-peerConnection:didSetSessionDescriptionWithError:>: finished
+2014-06-20 10:49:21.467 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.SDPObserver-peerConnection:didCreateSessionDescription:error:>: started
+2014-06-20 10:49:21.468 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.SDPObserver-peerConnection:didCreateSessionDescription:error:>: SDP Created Successfully
+2014-06-20 10:49:21.467 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-setWebRTCCall:>: started
+2014-06-20 10:49:21.469 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.SDPObserver-convertToPcmaPreferredSdp:>: started
+2014-06-20 10:49:21.469 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-setWebRTCCall:>: finished
+2014-06-20 10:49:21.471 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.SDPObserver-manageCrypto:>: started
+2014-06-20 10:49:21.474 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-createIncomingCall:>: finished
+2014-06-20 10:49:21.477 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.SDPObserver-manageCrypto:>: finished
+2014-06-20 10:49:21.477 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-setCallState:>: started
+2014-06-20 10:49:21.480 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-setCallState:>: started
+2014-06-20 10:49:21.481 MobileSDKArchitectureDemo[4728:60b] [INFO] <WebRTC.WebRTCCall-setCallState:>: Call State Changed to 8
+2014-06-20 10:49:21.481 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.SDPObserver-convertToPcmaPreferredSdp:>: finished
+2014-06-20 10:49:21.483 MobileSDKArchitectureDemo[4728:7d07] [INFO] <Utils-preferCodec:codec:>:  Preferring PCMA/8000 codec
+2014-06-20 10:49:21.483 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-webRTCCallStatusChanged:>: started
+2014-06-20 10:49:21.487 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.WebRTCCall-setLocalDescription:>: started
+2014-06-20 10:49:21.488 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-webRTCCallStatusChanged:>: finished
+2014-06-20 10:49:21.489 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-setCallState:>: finished
+2014-06-20 10:49:21.490 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-setCallState:>: finished
+2014-06-20 10:49:21.491 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-acceptCall:>: finished
+2014-06-20 10:49:21.492 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.WebRTCCall-setLocalDescription:>: Setting Local Description
+Ignored line: c=IN IP4 0.0.0.0
+Ignored line: c=IN IP4 0.0.0.0
+2014-06-20 10:49:21.493 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-videoStart>: started
+2014-06-20 10:49:21.497 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-videoStart>: started
+2014-06-20 10:49:21.499 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-getLocalVideoTrack>: started
+2014-06-20 10:49:21.501 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-getLocalVideoTrack>: finished
+2014-06-20 10:49:21.503 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-videoStart>: finished
+2014-06-20 10:49:21.505 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-videoStart>: finished
+Jingle:Channel[audio|1|__]: NULL DTLS identity supplied. Not doing DTLS
+Jingle:Channel[audio|2|__]: NULL DTLS identity supplied. Not doing DTLS
+Jingle:Channel[audio|1|__]: Other side didn't support DTLS.
+Jingle:Channel[audio|2|__]: Other side didn't support DTLS.
+Jingle:Channel[video|1|__]: NULL DTLS identity supplied. Not doing DTLS
+Jingle:Channel[video|2|__]: NULL DTLS identity supplied. Not doing DTLS
+Jingle:Channel[video|1|__]: Other side didn't support DTLS.
+Jingle:Channel[video|2|__]: Other side didn't support DTLS.
+No BUNDLE information, not bundling.
+Channel enabled
+Changing voice state, recv=0 send=0
+Channel enabled
+Changing video state, recv=0 send=0
+Session:7698247037890405243 Old state:STATE_RECEIVEDINITIATE New state:STATE_SENTACCEPT Type:urn:xmpp:jingle:apps:rtp:1 Transport:http://www.google.com/transport/p2p
+2014-06-20 10:49:21.512 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:signalingStateChanged:>: signalingStateChanged type is 0
+Setting local voice description
+Send channel 0 selected voice codec PCMA/8000/1 (8), bitrate=64000
+WebRtcVoiceMediaChannel::SetSendBandwidthInternal.
+Warning(webrtcvoiceengine.cc:2065): Unknown codec G729/8000/1 (18)
+Enabling VAD
+Add send ssrc: 1176191421
+WARNING: no real random source present!
+SRTP activated with negotiated parameters: send cipher_suite AES_CM_128_HMAC_SHA1_80 recv cipher_suite AES_CM_128_HMAC_SHA1_80
+Setting receive voice codecs:
+PCMA/8000/1 (8)
+PCMU/8000/1 (0)
+CN/8000/1 (13)
+telephone-event/8000/1 (96)
+Starting playout for channel #0
+2014-06-20 10:49:21.574 MobileSDKArchitectureDemo[4728:60b] [WARNING] <WebRTC.WebRTCCall-onAddStream:>: Video not included in remote media stream
+Captured frame size 640x480. Expected format I420 640x480x30
+2014-06-20 10:49:22.170 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-videoView:didChangeVideoSize:>: started
+2014-06-20 10:49:22.172 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-videoView:didChangeVideoSize:>: finished
+Changing voice state, recv=1 send=0
+Setting local video description
+AddSendStream {id:ARDAMSv0;ssrcs:[631512968];ssrc_groups:;cname:z8d4CuVHKCuOSFaA;sync_label:ARDAMS}
+webrtc: (vie_rtp_rtcp_impl.cc:114): SetLocalSSRC: channel: 0 ssrc: 631512968
+webrtc: (vie_rtp_rtcp_impl.cc:297): SetRTCPCName: channel: 0 rtcp_cname: z8d4CuVHKCuOSFaA
+webrtc: (vie_rtp_rtcp_impl.cc:114): SetLocalSSRC: channel: 0 ssrc: 631512968
+SetSendStreamFormat() : selected video codec VP8/1280x720x30fps@2000kbps (min=50kbps, start=300kbps)
+Video max quantization: 56
+VP8 number of temporal layers: 1
+VP8 options : picture loss indication = 0, feedback mode = 0, complexity = normal, resilience = off, denoising = 0, error concealment = 0, automatic resize = 0, frame dropping = 1, key frame interval = 3000
+Add send ssrc: 631512968
+SRTP activated with negotiated parameters: send cipher_suite AES_CM_128_HMAC_SHA1_80 recv cipher_suite AES_CM_128_HMAC_SHA1_80
+webrtc: (vie_codec_impl.cc:266): SetReceiveCodec for channel 0
+webrtc: (vie_codec_impl.cc:267): Codec type 0, payload type o
+Changing video state, recv=0 send=0
+2014-06-20 10:49:22.529 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:iceConnectionChanged:>: iceConnectionChanged type is 1
+Setting voice channel options: AudioOptions {}
+Set voice channel options.  Current options: AudioOptions {}
+webrtc: (vie_base_impl.cc:78): RegisterCpuOveruseObserver: RegisterCpuOveruseObserver on channel 0
+webrtc: (vie_base_impl.cc:78): RegisterCpuOveruseObserver: RegisterCpuOveruseObserver on channel 0
+Reset send codec needed is enabled? 0
+2014-06-20 10:49:22.535 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.WebRTCCall-setLocalDescription:>: finished
+2014-06-20 10:49:22.536 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.SDPObserver-peerConnection:didCreateSessionDescription:error:>: finished
+Transport: audio, allocating candidates
+2014-06-20 10:49:22.542 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.PCObserver-peerConnection:iceGatheringChanged:>: started
+2014-06-20 10:49:22.543 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:iceGatheringChanged:>: iceGatheringChanged type is 1
+2014-06-20 10:49:22.544 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.PCObserver-peerConnection:iceGatheringChanged:>: finished
+Transport: audio, allocating candidates
+2014-06-20 10:49:22.545 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.PCObserver-peerConnection:iceGatheringChanged:>: started
+2014-06-20 10:49:22.546 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:iceGatheringChanged:>: iceGatheringChanged type is 1
+2014-06-20 10:49:22.547 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.PCObserver-peerConnection:iceGatheringChanged:>: finished
+Transport: video, allocating candidates
+Jingle:Net[en0:10.254.16.0/20:Unknown]: Allocation Phase=Udp
+Jingle:Port[:1:0::Net[en0:10.254.16.0/20:Unknown]]: Port created
+AllocationSequence: UDPPort will be handling the STUN candidate generation.
+Adding allocated port for audio
+Jingle:Port[audio:1:0::Net[en0:10.254.16.0/20:Unknown]]: Added port to allocator
+Jingle:Conn[audio:4cvONwTr:1:0:local:udp:10.254.19.38:58964->:1:0.99:local:udp:47.168.150.32:47458|C--W|9079290933588671999|-]: Connection created
+Jingle:Channel[audio|1|__]: Created connection with origin=2, (1 total)
+Jingle:Channel[audio|1|__]: New best connection: Conn[audio:4cvONwTr:1:0:local:udp:10.254.19.38:58964->:1:0.99:local:udp:47.168.150.32:47458|C--W|9079290933588671999|-]
+Jingle:Net[en0:10.254.16.0/20:Unknown]: Allocation Phase=Udp
+Jingle:Port[:1:0::Net[en0:10.254.16.0/20:Unknown]]: Port created
+AllocationSequence: UDPPort will be handling the STUN candidate generation.
+Adding allocated port for audio
+Jingle:Port[audio:2:0::Net[en0:10.254.16.0/20:Unknown]]: Added port to allocator
+Jingle:Conn[audio:mWmVSF3y:2:0:local:udp:10.254.19.38:56417->:2:0.99:local:udp:47.168.150.32:47459|C--W|9079290933588671997|-]: Connection created
+Jingle:Channel[audio|2|__]: Created connection with origin=2, (1 total)
+Jingle:Channel[audio|2|__]: New best connection: Conn[audio:mWmVSF3y:2:0:local:udp:10.254.19.38:56417->:2:0.99:local:udp:47.168.150.32:47459|C--W|9079290933588671997|-]
+Jingle:Net[en0:10.254.16.0/20:Unknown]: Allocation Phase=Udp
+Jingle:Port[:1:0::Net[en0:10.254.16.0/20:Unknown]]: Port created
+AllocationSequence: UDPPort will be handling the STUN candidate generation.
+Adding allocated port for video
+Jingle:Port[video:1:0::Net[en0:10.254.16.0/20:Unknown]]: Added port to allocator
+Jingle:Conn[video:kY83ZNgI:1:0:local:udp:10.254.19.38:61753->:1:0.99:local:udp:47.168.150.32:61458|C--W|9079290933588671999|-]: Connection created
+Jingle:Channel[video|1|__]: Created connection with origin=2, (1 total)
+Jingle:Channel[video|1|__]: New best connection: Conn[video:kY83ZNgI:1:0:local:udp:10.254.19.38:61753->:1:0.99:local:udp:47.168.150.32:61458|C--W|9079290933588671999|-]
+Jingle:Net[en0:10.254.16.0/20:Unknown]: Allocation Phase=Udp
+Jingle:Port[:1:0::Net[en0:10.254.16.0/20:Unknown]]: Port created
+AllocationSequence: UDPPort will be handling the STUN candidate generation.
+Adding allocated port for video
+Jingle:Port[video:2:0::Net[en0:10.254.16.0/20:Unknown]]: Added port to allocator
+Jingle:Conn[video:VW4hfpbS:2:0:local:udp:10.254.19.38:49280->:2:0.99:local:udp:47.168.150.32:61459|C--W|9079290933588671997|-]: Connection created
+Jingle:Channel[video|2|__]: Created connection with origin=2, (1 total)
+Jingle:Channel[video|2|__]: New best connection: Conn[video:VW4hfpbS:2:0:local:udp:10.254.19.38:49280->:2:0.99:local:udp:47.168.150.32:61459|C--W|9079290933588671997|-]
+webrtc: (vie_codec_impl.cc:138): SetSendCodec for channel 0
+webrtc: (vie_codec_impl.cc:31): CodecType 0, pl_type 111, resolution 640 x 480, start br 300, min br 50, max br 2000, max fps 30, max qp 56, number of streams 0
+webrtc: (vie_codec_impl.cc:43): VP8 specific settings
+webrtc: (vie_codec_impl.cc:44): pictureLossIndicationOn 0, feedbackModeOn 0, complexity 0, resilience 0, numberOfTemporalLayers 1, keyFrameinterval 3000
+2014-06-20 10:49:22.548 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.PCObserver-peerConnection:iceGatheringChanged:>: started
+2014-06-20 10:49:22.579 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:iceGatheringChanged:>: iceGatheringChanged type is 1
+webrtc: (vie_rtp_rtcp_impl.cc:663): SetMinTransmitBitrate: channel: 0 min_transmit_bitrate_kbps: 0
+webrtc: (vie_rtp_rtcp_impl.cc:649): SetTransmissionSmoothingStatus: channel: 0 enable: off
+Capture size changed : selected video codec VP8/640x480x30fps@2000kbps (min=50kbps, start=300kbps)
+Video max quantization: 56
+VP8 number of temporal layers: 1
+VP8 options : picture loss indication = 0, feedback mode = 0, complexity = normal, resilience = off, denoising = 0, error concealment = 0, automatic resize = 1, frame dropping = 1, key frame interval = 3000
+2014-06-20 10:49:22.592 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.PCObserver-peerConnection:iceGatheringChanged:>: finished
+Transport: video, allocating candidates
+2014-06-20 10:49:22.598 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.PCObserver-peerConnection:iceGatheringChanged:>: started
+2014-06-20 10:49:22.607 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:iceGatheringChanged:>: iceGatheringChanged type is 1
+2014-06-20 10:49:22.609 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.PCObserver-peerConnection:iceGatheringChanged:>: finished
+Session:7698247037890405243 Old state:STATE_SENTACCEPT New state:STATE_INPROGRESS Type:urn:xmpp:jingle:apps:rtp:1 Transport:http://www.google.com/transport/p2p
+2014-06-20 10:49:22.610 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.SDPObserver-peerConnection:didSetSessionDescriptionWithError:>: started
+Jingle:Net[en0:10.254.16.0/20:Unknown]: Allocation Phase=Relay
+Jingle:Net[en0:10.254.16.0/20:Unknown]: Allocation Phase=Relay
+Jingle:Net[en0:10.254.16.0/20:Unknown]: Allocation Phase=Relay
+2014-06-20 10:49:22.612 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.SDPObserver-peerConnection:didSetSessionDescriptionWithError:>: SDP is set Successfully
+Jingle:Net[en0:10.254.16.0/20:Unknown]: Allocation Phase=Relay
+2014-06-20 10:49:22.616 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.WebRTCCall-onSetSDPSuccess>: started
+2014-06-20 10:49:22.623 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.WebRTCCall-callCreateFSM>: started
+2014-06-20 10:49:22.625 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.WebRTCCall-callCreateFSM>: finished
+2014-06-20 10:49:22.626 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.WebRTCCall-onSetSDPSuccess>: finished
+2014-06-20 10:49:22.628 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.SDPObserver-peerConnection:didSetSessionDescriptionWithError:>: finished
+2014-06-20 10:49:22.631 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:gotICECandidate:>: gotICECandidate
+2014-06-20 10:49:22.633 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:gotICECandidate:>: gotICECandidate
+2014-06-20 10:49:22.640 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:gotICECandidate:>: gotICECandidate
+2014-06-20 10:49:22.641 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:gotICECandidate:>: gotICECandidate
+Jingle:Net[en0:10.254.16.0/20:Unknown]: Allocation Phase=Tcp
+Jingle:Port[:1:0:local:Net[en0:10.254.16.0/20:Unknown]]: Port created
+Adding allocated port for audio
+Jingle:Port[audio:1:0:local:Net[en0:10.254.16.0/20:Unknown]]: Added port to allocator
+Jingle:Net[en0:10.254.16.0/20:Unknown]: Allocation Phase=Tcp
+Jingle:Port[:1:0:local:Net[en0:10.254.16.0/20:Unknown]]: Port created
+Adding allocated port for audio
+Jingle:Port[audio:2:0:local:Net[en0:10.254.16.0/20:Unknown]]: Added port to allocator
+Jingle:Net[en0:10.254.16.0/20:Unknown]: Allocation Phase=Tcp
+Jingle:Port[:1:0:local:Net[en0:10.254.16.0/20:Unknown]]: Port created
+Adding allocated port for video
+Jingle:Port[video:1:0:local:Net[en0:10.254.16.0/20:Unknown]]: Added port to allocator
+Jingle:Net[en0:10.254.16.0/20:Unknown]: Allocation Phase=Tcp
+Jingle:Port[:1:0:local:Net[en0:10.254.16.0/20:Unknown]]: Port created
+Adding allocated port for video
+Jingle:Port[video:2:0:local:Net[en0:10.254.16.0/20:Unknown]]: Added port to allocator
+2014-06-20 10:49:22.680 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:gotICECandidate:>: gotICECandidate
+2014-06-20 10:49:22.690 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:gotICECandidate:>: gotICECandidate
+2014-06-20 10:49:22.692 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:gotICECandidate:>: gotICECandidate
+2014-06-20 10:49:22.693 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:gotICECandidate:>: gotICECandidate
+VAdapt CPU Request: keep Steps: 0 Changed: true To: 640x480
+Jingle:Net[en0:10.254.16.0/20:Unknown]: Allocation Phase=SslTcp
+All candidates gathered for audio:1:0
+Transport: audio, component 1 allocation complete
+Jingle:Net[en0:10.254.16.0/20:Unknown]: Allocation Phase=SslTcp
+All candidates gathered for audio:2:0
+Transport: audio, component 2 allocation complete
+2014-06-20 10:49:22.728 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:gotICECandidate:>: gotICECandidate
+2014-06-20 10:49:22.730 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:gotICECandidate:>: gotICECandidate
+2014-06-20 10:49:22.735 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:gotICECandidate:>: gotICECandidate
+2014-06-20 10:49:22.737 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:gotICECandidate:>: gotICECandidate
+Transport: audio allocation complete
+Jingle:Net[en0:10.254.16.0/20:Unknown]: Allocation Phase=SslTcp
+All candidates gathered for video:1:0
+Transport: video, component 1 allocation complete
+Jingle:Net[en0:10.254.16.0/20:Unknown]: Allocation Phase=SslTcp
+All candidates gathered for video:2:0
+Transport: video, component 2 allocation complete
+Transport: video allocation complete
+Candidate gathering is complete.
+2014-06-20 10:49:22.741 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.PCObserver-peerConnection:iceGatheringChanged:>: started
+2014-06-20 10:49:22.743 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:iceGatheringChanged:>: iceGatheringChanged type is 2
+2014-06-20 10:49:22.744 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:iceGatheringChanged:>: Ice Gathering completed
+2014-06-20 10:49:22.745 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.WebRTCCall-onIceGatheringCompleted>: started
+2014-06-20 10:49:22.746 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.WebRTCCall-onIceGatheringCompleted>: ICE Gathering completed! We can send the SDP
+2014-06-20 10:49:22.747 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <CallService.IncomingCall-sendCallRequestToServer>: started
+2014-06-20 10:49:22.754 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <CallService.IncomingCall-getLocalSDP>: started
+2014-06-20 10:49:22.760 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.WebRTCCall-getLocalSDP>: finished
+2014-06-20 10:49:22.761 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <CallService.IncomingCall-getLocalSDP>: finished
+2014-06-20 10:49:22.762 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <CallService.IncomingCall-getCallId>: started
+2014-06-20 10:49:22.767 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <CallService.IncomingCall-getCallId>: finished
+2014-06-20 10:49:22.768 MobileSDKArchitectureDemo[4728:7d07] [INFO] <CallService.IncomingCall-sendCallRequestToServer>: Local SDP will be sent to server for call:(77157156_0efbfc5e_1833f15a-67c9-4c24-b5fb-6d20bd6bc010:2144048b644640e43d66069a790a875cdfed74b@47.168.116.57:19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$(19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$d3ZtMzItYXNpcGMtMQ%3D%3D%0A 
+SDP:v=0
+
+o=- 7698247037890405243 2 IN IP4 127.0.0.1
+
+s=-
+
+t=0 0
+
+a=msid-semantic: WMS ARDAMS
+
+m=audio 58964 RTP/SAVPF 8 0 13 96
+
+c=IN IP4 217.78.97.15
+
+a=rtcp:56417 IN IP4 217.78.97.15
+
+a=candidate:939880671 1 udp 2122129151 10.254.19.38 58964 typ host generation 0
+
+a=candidate:939880671 2 udp 2122129150 10.254.19.38 56417 typ host generation 0
+
+a=candidate:1988529199 1 tcp 1518149375 10.254.19.38 54185 typ host generation 0
+
+a=candidate:1988529199 2 tcp 1518149374 10.254.19.38 54186 typ host generation 0
+
+a=candidate:3457485067 2 udp 1685921534 217.78.97.15 56417 typ srflx raddr 10.254.19.38 rport 56417 generation 0
+
+a=candidate:3457485067 1 udp 1685921535 217.78.97.15 58964 typ srflx raddr 10.254.19.38 rport 58964 generation 0
+
+a=ice-ufrag:/5bvXoG1PEFwW8pu
+
+a=ice-pwd:I0roPoC3QD5uTkqntWHHSeSv
+
+a=mid:audio
+
+a=sendrecv
+
+a=crypto:1 AES_CM_128_HMAC_SHA1_80 inline:UQ5Db4wQP4dGycEUt4QLqCVsccx1dSikw5R3lE+2
+
+a=rtpmap:8 PCMA/8000
+
+a=rtpmap:0 PCMU/8000
+
+a=rtpmap:13 CN/8000
+
+a=rtpmap:96 telephone-event/8000
+
+a=ssrc:1176191421 cname:z8d4CuVHKCuOSFaA
+
+a=ssrc:1176191421 msid:ARDAMS ARDAMSa0
+
+a=ssrc:1176191421 mslabel:ARDAMS
+
+a=ssrc:1176191421 label:ARDAMSa0
+
+m=video 61753 RTP/SAVPF 111
+
+c=IN IP4 217.78.97.15
+
+a=rtcp:49280 IN IP4 217.78.97.15
+
+a=candidate:939880671 1 udp 2122129151 10.254.19.38 61753 typ host generation 0
+
+a=candidate:939880671 2 udp 2122129150 10.254.19.38 49280 typ host generation 0
+
+a=candidate:1988529199 1 tcp 1518149375 10.254.19.38 54187 typ host generation 0
+
+a=candidate:1988529199 2 tcp 1518149374 10.254.19.38 54188 typ host generation 0
+
+a=candidate:3457485067 1 udp 1685921535 217.78.97.15 61753 typ srflx raddr 10.254.19.38 rport 61753 generation 0
+
+a=candidate:3457485067 2 udp 1685921534 217.78.97.15 49280 typ srflx raddr 10.254.19.38 rport 49280 generation 0
+
+a=ice-ufrag:h8PniicU4Dy5n30r
+
+a=ice-pwd:JGUGy3r58bkt3CpeYSIsTN9r
+
+a=mid:video
+
+a=sendonly
+
+a=crypto:1 AES_CM_128_HMAC_SHA1_80 inline:mkcl6PsEQqS7WTmmuAYTxrk1bJTXW0J/0hMLRHFU
+
+a=rtpmap:111 VP8/90000
+
+a=rtcp-fb:111 ccm fir
+
+a=rtcp-fb:111 nack
+
+a=rtcp-fb:111 nack pli
+
+a=ssrc:631512968 cname:z8d4CuVHKCuOSFaA
+
+a=ssrc:631512968 msid:ARDAMS ARDAMSv0
+
+a=ssrc:631512968 mslabel:ARDAMS
+
+a=ssrc:631512968 label:ARDAMSv0
+
+2014-06-20 10:49:22.802 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <CallService.IncomingCall-getCallId>: started
+2014-06-20 10:49:22.805 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <CallService.IncomingCall-getCallId>: finished
+2014-06-20 10:49:22.807 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <RestManager.RestRequest-getDefaultHeaders>: started
+2014-06-20 10:49:22.808 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <RestManager.RestRequest-getDefaultHeaders>: finished
+2014-06-20 10:49:22.809 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <RestManager.RestRequest-init:andMessageBody:andServiceUrlSuffix:>: started
+2014-06-20 10:49:22.810 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <RestManager.RestPutRequest-init:andMessageBody:andServiceUrlSuffix:>: finished
+2014-06-20 10:49:22.815 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <RestManager.RestPutRequest-init:andServiceUrlSuffix:>: finished
+2014-06-20 10:49:22.832 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <RestManager.RestManager-executeSynchronous:andHandler:>: started
+2014-06-20 10:49:22.834 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <RestManager.RestPutRequest-initWithRequest>: started
+2014-06-20 10:49:22.840 MobileSDKArchitectureDemo[4728:7d07] [TRACE] <RestManager.RestPutRequest-initWithRequest>: Created rest request url: http://47.168.150.32:8580/rest/version/1/user/gamze3@spidr.com/callControl/callSessions/(77157156_0efbfc5e_1833f15a-67c9-4c24-b5fb-6d20bd6bc010:2144048b644640e43d66069a790a875cdfed74b@47.168.116.57:19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$(19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$d3ZtMzItYXNpcGMtMQ%3D%3D%0A
+2014-06-20 10:49:22.841 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <RestManager.RestPutRequest-addHeaderParameters>: started
+2014-06-20 10:49:22.850 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <RestManager.RestPutRequest-addHeaderParameters>: finished
+2014-06-20 10:49:22.853 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <RestManager.RestPutRequest-getRestBodyData:>: started
+2014-06-20 10:49:22.854 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <RestManager.RestPutRequest-getRestBodyData:>: finished
+2014-06-20 10:49:22.855 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <RestManager.RestPutRequest-initWithRequest>: finished
+2014-06-20 10:49:22.856 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <RestManager.RestConnection-executeSynchronous:>: started
+2014-06-20 10:49:22.894 MobileSDKArchitectureDemo[4728:7d07] Reachability Flag Status: -R -----l- networkStatusForFlags
+Jingle:Conn[audio:4cvONwTr:1:0:local:udp:10.254.19.38:58964->:1:0.99:local:udp:47.168.150.32:47458|CRWS|9079290933588671999|-]: Received STUN ping response a8EpOdrQ1tBE, pings_since_last_response_=219888513 219888571 219888620 219888671 219888738 219888798 219888864 219888913 , rtt=14
+Jingle:Conn[audio:mWmVSF3y:2:0:local:udp:10.254.19.38:56417->:2:0.99:local:udp:47.168.150.32:47459|CRWS|9079290933588671997|-]: Received STUN ping response j7Wm/OUF73gl, pings_since_last_response_=219888514 219888571 219888620 219888671 219888739 219888801 219888865 219888924 , rtt=3
+Channel socket writable (audio, 1) for the first time
+Using Cand[939880671:1:udp:2122129151:10.254.19.38:58964:local::0:/5bvXoG1PEFwW8pu:I0roPoC3QD5uTkqntWHHSeSv]->Cand[1:1:udp:2113937151:47.168.150.32:47458:local::0:LmKuU1EsVpxtyenkpuFc6dgo2lKFOrNo:kEU0M9eU+ZYLJPbAKhRTEiR42o6iblVt]
+Setting option overrides: AudioOptions {}
+Applying audio options: AudioOptions {aec: false, agc: false, typing: false, experimental_agc: false, experimental_aec: false, experimental_ns: false, }
+Typing detection is enabled? 0
+Warning(webrtcvoiceengine.cc:846): SetTypingDetectionStatus(0) failed, err=8003
+Experimental aec is 0
+Changing voice state, recv=1 send=1
+Error(webrtcvideoengine.cc:1507): webrtc: (voe_audio_processing_impl.cc:1001): SetTypingDetectionStatus: not supported
+Jingle:Conn[video:kY83ZNgI:1:0:local:udp:10.254.19.38:61753->:1:0.99:local:udp:47.168.150.32:61458|CRWS|9079290933588671999|-]: Received STUN ping response IDbO70lvz2+B, pings_since_last_response_=219888515 219888571 219888620 219888671 219888739 219888801 219888874 219888924 , rtt=5
+Jingle:Conn[video:VW4hfpbS:2:0:local:udp:10.254.19.38:49280->:2:0.99:local:udp:47.168.150.32:61459|CRWS|9079290933588671997|-]: Received STUN ping response USmeb9s6WcYm, pings_since_last_response_=219888515 219888571 219888620 219888671 219888739 219888801 219888874 219888925 , rtt=6
+SetNetworkTransmissionState: 1
+SetNetworkTransmissionState: 1
+webrtc: (vie_network_impl.cc:56): SetNetworkTransmissionState: channel: 0 transmitting: yes
+webrtc: (vie_network_impl.cc:56): SetNetworkTransmissionState: channel: 0 transmitting: yes
+Channel socket writable (video, 1) for the first time
+Using Cand[939880671:1:udp:2122129151:10.254.19.38:61753:local::0:h8PniicU4Dy5n30r:JGUGy3r58bkt3CpeYSIsTN9r]->Cand[1:1:udp:2113937151:47.168.150.32:61458:local::0:i6b49ef9xHV9QjTRCUYB5E1HwYhSjnaW:Y9BUrs9S8tV3g90yQZ2NcvhxWKDVG/TO]
+webrtc: (vie_base_impl.cc:267): StartSend: StartSend: 0
+Changing video state, recv=0 send=1
+2014-06-20 10:49:23.039 MobileSDKArchitectureDemo[4728:7d07] [INFO] <RestManager.RestConnection-executeSynchronous:>: Synchronous rest request was completed successfully
+2014-06-20 10:49:23.043 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <CallAnswerResponseHandler-onFinish:>: started
+2014-06-20 10:49:23.046 MobileSDKArchitectureDemo[4728:7d07] [INFO] <CallAnswerResponseHandler-onFinish:>: CallAnswerResponseHandler Call Answer is successfully sent
+2014-06-20 10:49:23.080 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.WebSocket-webSocket:didReceiveMessage:>: started
+2014-06-20 10:49:23.087 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.WebSocket-webSocket:didReceiveMessage:>: started
+2014-06-20 10:49:23.091 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationComponent-dataReceivedFromSocket:>: started
+2014-06-20 10:49:23.093 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-notificationReceived:>: started
+2014-06-20 10:49:23.097 MobileSDKArchitectureDemo[4728:60b] [TRACE] <NotificationEngine.NotificationEngine-notificationReceived:>: Received notificationMessage eventType: callCancel
+2014-06-20 10:49:23.103 MobileSDKArchitectureDemo[4728:60b] [TRACE] <NotificationEngine.NotificationEngine-notificationReceived:>: Received notificationMessage parameters: {
+    callNotificationParams =     {
+        calleeDisplayNumber = "Unknown Number";
+        callerDisplayNumber = "Unknown Number";
+        callerName = "Unknown Name";
+    };
+    sessionParams =     {
+        sessionData = "(77157156_0efbfc5e_1833f15a-67c9-4c24-b5fb-6d20bd6bc010:2144048b644640e43d66069a790a875cdfed74b@47.168.116.57:19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$(19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$d3ZtMzItYXNpcGMtMQ%3D%3D%0A";
+    };
+}
+2014-06-20 10:49:23.105 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-notificationReceived:>: started
+2014-06-20 10:49:23.107 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-getCallId>: started
+2014-06-20 10:49:23.111 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-getCallId>: finished
+2014-06-20 10:49:23.113 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-notificationReceived:>: finished
+2014-06-20 10:49:23.114 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <IMService.IMService-notificationReceived:>: started
+2014-06-20 10:49:23.115 MobileSDKArchitectureDemo[4728:60b] [INFO] <IMService.IMService-notificationReceived:>: NotificationHandleDelegate's notificationReceived method is invoked
+2014-06-20 10:49:23.134 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <IMService.IMService-notificationReceived:>: finished
+Warning(webrtcvideoengine.cc:1507): webrtc: Channel::UpdatePlayoutTimestamp() failed to read playout timestamp from the ACM
+Error(webrtcvideoengine.cc:1507): webrtc: UpdatePlayoutTimestamp() failed to retrieve timestamp (error=9033)
+2014-06-20 10:49:23.135 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <PresenceService.PresenceService-notificationReceived:>: started
+2014-06-20 10:49:23.136 MobileSDKArchitectureDemo[4728:60b] [INFO] <PresenceService.PresenceService-notificationReceived:>: Incoming notification event type: callCancel
+2014-06-20 10:49:23.139 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <PresenceService.PresenceService-notificationReceived:>: finished
+2014-06-20 10:49:23.140 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-notificationReceived:>: finished
+2014-06-20 10:49:23.141 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationComponent-dataReceivedFromSocket:>: finished
+2014-06-20 10:49:23.143 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-sendAudit>: started
+2014-06-20 10:49:23.144 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-getCallId>: started
+2014-06-20 10:49:23.145 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-getCallId>: finished
+2014-06-20 10:49:23.147 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestRequest-getDefaultHeaders>: started
+2014-06-20 10:49:23.151 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestRequest-getDefaultHeaders>: finished
+2014-06-20 10:49:23.155 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestRequest-init:andMessageBody:andServiceUrlSuffix:>: started
+2014-06-20 10:49:23.157 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPutRequest-init:andMessageBody:andServiceUrlSuffix:>: finished
+2014-06-20 10:49:23.158 MobileSDKArchitectureDemo[4728:7d07] -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+- incoming Call 1
+2014-06-20 10:49:23.158 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPutRequest-init:andServiceUrlSuffix:>: finished
+2014-06-20 10:49:23.160 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <CallAnswerResponseHandler-onFinish:>: finished
+2014-06-20 10:49:23.161 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestManager-execute:andHandler:>: started
+2014-06-20 10:49:23.163 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <RestManager.RestConnection-executeSynchronous:>: finished
+2014-06-20 10:49:23.168 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPutRequest-initWithRequest>: started
+2014-06-20 10:49:23.169 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <RestManager.RestManager-executeSynchronous:andHandler:>: finished
+2014-06-20 10:49:23.172 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <CallService.IncomingCall-sendCallRequestToServer>: finished
+2014-06-20 10:49:23.171 MobileSDKArchitectureDemo[4728:60b] [TRACE] <RestManager.RestPutRequest-initWithRequest>: Created rest request url: http://47.168.150.32:8580/rest/version/1/user/gamze3@spidr.com/callControl/callSessions/(77157156_0efbfc5e_1833f15a-67c9-4c24-b5fb-6d20bd6bc010:2144048b644640e43d66069a790a875cdfed74b@47.168.116.57:19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$(19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$d3ZtMzItYXNpcGMtMQ%3D%3D%0A
+2014-06-20 10:49:23.173 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.WebRTCCall-setCallState:>: started
+2014-06-20 10:49:23.174 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPutRequest-addHeaderParameters>: started
+2014-06-20 10:49:23.175 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.WebRTCCall-setCallState:>: Call State Changed to 1
+2014-06-20 10:49:23.175 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPutRequest-addHeaderParameters>: finished
+2014-06-20 10:49:23.176 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPutRequest-getRestBodyData:>: started
+2014-06-20 10:49:23.176 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <CallService.IncomingCall-webRTCCallStatusChanged:>: started
+2014-06-20 10:49:23.177 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPutRequest-getRestBodyData:>: finished
+2014-06-20 10:49:23.178 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <CallService.IncomingCall-webRTCCallStatusChanged:>: finished
+2014-06-20 10:49:23.181 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestPutRequest-initWithRequest>: finished
+2014-06-20 10:49:23.181 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.WebRTCCall-setCallState:>: finished
+2014-06-20 10:49:23.187 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-execute:>: started
+2014-06-20 10:49:23.189 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.WebRTCCall-onIceGatheringCompleted>: finished
+2014-06-20 10:49:23.190 MobileSDKArchitectureDemo[4728:7d07] [VERBOSE] <WebRTC.PCObserver-peerConnection:iceGatheringChanged:>: finished
+2014-06-20 10:49:23.192 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:iceConnectionChanged:>: iceConnectionChanged type is 2
+2014-06-20 10:49:23.194 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:iceConnectionChanged:>: iceConnectionChanged type is 3
+2014-06-20 10:49:23.195 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:iceConnectionChanged:>: iceConnectionChanged type is 2
+2014-06-20 10:49:23.199 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:iceConnectionChanged:>: iceConnectionChanged type is 3
+2014-06-20 10:49:23.202 MobileSDKArchitectureDemo[4728:60b] Reachability Flag Status: -R -----l- networkStatusForFlags
+2014-06-20 10:49:23.203 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-execute:>: finished
+2014-06-20 10:49:23.204 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestManager-execute:andHandler:>: finished
+2014-06-20 10:49:23.205 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-sendAudit>: finished
+2014-06-20 10:49:23.267 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveResponse:>: started
+2014-06-20 10:49:23.269 MobileSDKArchitectureDemo[4728:60b] [TRACE] <RestManager.RestConnection-connection:didReceiveResponse:>: Received response code : 200
+2014-06-20 10:49:23.270 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveResponse:>: finished
+2014-06-20 10:49:23.271 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveData:>: started
+2014-06-20 10:49:23.272 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveData:>: finished
+2014-06-20 10:49:23.273 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connectionDidFinishLoading:>: started
+2014-06-20 10:49:23.275 MobileSDKArchitectureDemo[4728:60b] [INFO] <RestManager.RestConnection-connectionDidFinishLoading:>: Asynchronous rest request was completed successfully
+2014-06-20 10:49:23.277 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connectionDidFinishLoading:>: finished
+VAdapt CPU Request: keep Steps: 0 Changed: false To: 640x480
+VAdapt Frame: scaled 0 / out 90 / in 90 Changes: 0 Input: 640x480 i33333333 Scale: 1 Output: 640x480 i33333333 Changed: false
+VAdapt CPU Request: keep Steps: 0 Changed: false To: 640x480
+Jingle:Conn[audio:4cvONwTr:1:0:local:udp:10.254.19.38:58964->:1:0.99:local:udp:47.168.150.32:47458|CRWS|9079290933588671999|132]: Timing-out STUN ping L+N1jzc28Pv6 after 5013 ms
+Jingle:Conn[audio:mWmVSF3y:2:0:local:udp:10.254.19.38:56417->:2:0.99:local:udp:47.168.150.32:47459|CRWS|9079290933588671997|132]: Timing-out STUN ping e+FtRsVFqJtt after 5013 ms
+Jingle:Conn[video:kY83ZNgI:1:0:local:udp:10.254.19.38:61753->:1:0.99:local:udp:47.168.150.32:61458|CRWS|9079290933588671999|134]: Timing-out STUN ping Qe/kiebBzzHL after 5014 ms
+Jingle:Conn[video:VW4hfpbS:2:0:local:udp:10.254.19.38:49280->:2:0.99:local:udp:47.168.150.32:61459|CRWS|9079290933588671997|134]: Timing-out STUN ping M37hJe6B2I0J after 5014 ms
+Jingle:Conn[audio:4cvONwTr:1:0:local:udp:10.254.19.38:58964->:1:0.99:local:udp:47.168.150.32:47458|CRWS|9079290933588671999|132]: Timing-out STUN ping TWiCg2fOOVeu after 5010 ms
+Jingle:Conn[audio:mWmVSF3y:2:0:local:udp:10.254.19.38:56417->:2:0.99:local:udp:47.168.150.32:47459|CRWS|9079290933588671997|132]: Timing-out STUN ping N+L/VcS0LuRJ after 5011 ms
+Jingle:Conn[video:kY83ZNgI:1:0:local:udp:10.254.19.38:61753->:1:0.99:local:udp:47.168.150.32:61458|CRWS|9079290933588671999|134]: Timing-out STUN ping ZzTNWH5n6qdl after 5011 ms
+Jingle:Conn[video:VW4hfpbS:2:0:local:udp:10.254.19.38:49280->:2:0.99:local:udp:47.168.150.32:61459|CRWS|9079290933588671997|134]: Timing-out STUN ping nn/OeomqMbDM after 5010 ms
+Jingle:Conn[audio:4cvONwTr:1:0:local:udp:10.254.19.38:58964->:1:0.99:local:udp:47.168.150.32:47458|CRWS|9079290933588671999|132]: Timing-out STUN ping YwRxlOzqel08 after 5005 ms
+Jingle:Conn[audio:mWmVSF3y:2:0:local:udp:10.254.19.38:56417->:2:0.99:local:udp:47.168.150.32:47459|CRWS|9079290933588671997|132]: Timing-out STUN ping eBaECUONzODf after 5005 ms
+Jingle:Conn[video:kY83ZNgI:1:0:local:udp:10.254.19.38:61753->:1:0.99:local:udp:47.168.150.32:61458|CRWS|9079290933588671999|134]: Timing-out STUN ping 6CzxD/nEwoN9 after 5005 ms
+Jingle:Conn[video:VW4hfpbS:2:0:local:udp:10.254.19.38:49280->:2:0.99:local:udp:47.168.150.32:61459|CRWS|9079290933588671997|134]: Timing-out STUN ping EPqM6a5nKvR2 after 5005 ms
+Jingle:Conn[audio:4cvONwTr:1:0:local:udp:10.254.19.38:58964->:1:0.99:local:udp:47.168.150.32:47458|CRWS|9079290933588671999|132]: Timing-out STUN ping WiOTSHtjVzzz after 5004 ms
+Jingle:Conn[audio:mWmVSF3y:2:0:local:udp:10.254.19.38:56417->:2:0.99:local:udp:47.168.150.32:47459|CRWS|9079290933588671997|132]: Timing-out STUN ping qTKEcL492tIS after 5006 ms
+Jingle:Conn[video:kY83ZNgI:1:0:local:udp:10.254.19.38:61753->:1:0.99:local:udp:47.168.150.32:61458|CRWS|9079290933588671999|134]: Timing-out STUN ping 9dmqJLIBLJ3O after 5007 ms
+Jingle:Conn[video:VW4hfpbS:2:0:local:udp:10.254.19.38:49280->:2:0.99:local:udp:47.168.150.32:61459|CRWS|9079290933588671997|134]: Timing-out STUN ping Xwhapf+Q5HN9 after 5008 ms
+Jingle:Conn[audio:4cvONwTr:1:0:local:udp:10.254.19.38:58964->:1:0.99:local:udp:47.168.150.32:47458|CRWS|9079290933588671999|132]: Timing-out STUN ping Rp1UWPcSXi+v after 5004 ms
+Jingle:Conn[audio:mWmVSF3y:2:0:local:udp:10.254.19.38:56417->:2:0.99:local:udp:47.168.150.32:47459|CRWS|9079290933588671997|132]: Timing-out STUN ping Hrms8YJtAmsS after 5003 ms
+Jingle:Conn[video:kY83ZNgI:1:0:local:udp:10.254.19.38:61753->:1:0.99:local:udp:47.168.150.32:61458|CRWS|9079290933588671999|134]: Timing-out STUN ping rVCkRWua5hDX after 5003 ms
+Jingle:Conn[video:VW4hfpbS:2:0:local:udp:10.254.19.38:49280->:2:0.99:local:udp:47.168.150.32:61459|CRWS|9079290933588671997|134]: Timing-out STUN ping VL+TfayKsNCA after 5003 ms
+Jingle:Conn[audio:4cvONwTr:1:0:local:udp:10.254.19.38:58964->:1:0.99:local:udp:47.168.150.32:47458|CRWS|9079290933588671999|132]: Timing-out STUN ping JRjqwM8SSNbl after 5009 ms
+Jingle:Conn[audio:mWmVSF3y:2:0:local:udp:10.254.19.38:56417->:2:0.99:local:udp:47.168.150.32:47459|CRWS|9079290933588671997|132]: Timing-out STUN ping J5pgnDp6YY7D after 5008 ms
+Jingle:Conn[video:kY83ZNgI:1:0:local:udp:10.254.19.38:61753->:1:0.99:local:udp:47.168.150.32:61458|CRWS|9079290933588671999|134]: Timing-out STUN ping P9QlKTn0TumO after 5008 ms
+Jingle:Conn[video:VW4hfpbS:2:0:local:udp:10.254.19.38:49280->:2:0.99:local:udp:47.168.150.32:61459|CRWS|9079290933588671997|134]: Timing-out STUN ping 5CkuSIqk11XG after 5011 ms
+Jingle:Conn[audio:4cvONwTr:1:0:local:udp:10.254.19.38:58964->:1:0.99:local:udp:47.168.150.32:47458|CRWS|9079290933588671999|103]: Timing-out STUN ping jASN73Ex/X28 after 5014 ms
+Jingle:Conn[audio:mWmVSF3y:2:0:local:udp:10.254.19.38:56417->:2:0.99:local:udp:47.168.150.32:47459|CRWS|9079290933588671997|103]: Timing-out STUN ping 3yjIOS6IYB+5 after 5015 ms
+Jingle:Conn[video:kY83ZNgI:1:0:local:udp:10.254.19.38:61753->:1:0.99:local:udp:47.168.150.32:61458|CRWS|9079290933588671999|102]: Timing-out STUN ping 29tiL7jPGYkc after 5015 ms
+Jingle:Conn[video:VW4hfpbS:2:0:local:udp:10.254.19.38:49280->:2:0.99:local:udp:47.168.150.32:61459|CRWS|9079290933588671997|102]: Timing-out STUN ping I2z/b7g+UZJa after 5015 ms
+VAdapt Frame: scaled 0 / out 180 / in 180 Changes: 0 Input: 640x480 i33333333 Scale: 1 Output: 640x480 i33333333 Changed: false
+VAdapt CPU Request: down Steps: 1 Changed: true To: 480x360
+VAdapt Frame: scaled 1 / out 182 / in 182 Changes: 1 Input: 640x480 i33333333 Scale: 0.75 Output: 480x360 i33333333 Changed: true
+webrtc: (vie_codec_impl.cc:138): SetSendCodec for channel 0
+webrtc: (vie_codec_impl.cc:31): CodecType 0, pl_type 111, resolution 480 x 360, start br 352, min br 50, max br 2000, max fps 30, max qp 56, number of streams 0
+webrtc: (vie_codec_impl.cc:43): VP8 specific settings
+webrtc: (vie_codec_impl.cc:44): pictureLossIndicationOn 0, feedbackModeOn 0, complexity 0, resilience 0, numberOfTemporalLayers 1, keyFrameinterval 3000
+2014-06-20 10:49:28.741 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-videoView:didChangeVideoSize:>: started
+2014-06-20 10:49:28.743 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-videoView:didChangeVideoSize:>: finished
+webrtc: (vie_rtp_rtcp_impl.cc:663): SetMinTransmitBitrate: channel: 0 min_transmit_bitrate_kbps: 0
+Capture size changed : selected video codec VP8/480x360x30fps@2000kbps (min=50kbps, start=352kbps)
+webrtc: (vie_rtp_rtcp_impl.cc:649): SetTransmissionSmoothingStatus: channel: 0 enable: off
+Video max quantization: 56
+VP8 number of temporal layers: 1
+VP8 options : picture loss indication = 0, feedback mode = 0, complexity = normal, resilience = off, denoising = 0, error concealment = 0, automatic resize = 1, frame dropping = 1, key frame interval = 3000
+Warning(webrtcvideoengine.cc:1507): webrtc: (rtp_rtcp_impl.cc:204): Process: Timeout: No RTCP RR received.
+Warning(webrtcvideoengine.cc:1507): webrtc: (rtp_rtcp_impl.cc:206): Process: Timeout: No increase in RTCP RR extended highest sequence number.
+VAdapt CPU Request: keep Steps: 1 Changed: false To: 480x360
+VAdapt Frame: scaled 89 / out 270 / in 270 Changes: 1 Input: 640x480 i33333333 Scale: 0.75 Output: 480x360 i33333333 Changed: false
+VAdapt CPU Request: keep Steps: 1 Changed: false To: 480x360
+VAdapt Frame: scaled 179 / out 360 / in 360 Changes: 1 Input: 640x480 i33333333 Scale: 0.75 Output: 480x360 i33333333 Changed: false
+VAdapt CPU Request: keep Steps: 1 Changed: false To: 480x360
+Warning(webrtcvideoengine.cc:1507): webrtc: (rtp_rtcp_impl.cc:204): Process: Timeout: No RTCP RR received.
+Warning(webrtcvideoengine.cc:1507): webrtc: (rtp_rtcp_impl.cc:206): Process: Timeout: No increase in RTCP RR extended highest sequence number.
+VAdapt CPU Request: keep Steps: 1 Changed: false To: 480x360
+2014-06-20 10:49:37.510 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.WebSocket-webSocket:didReceiveMessage:>: started
+2014-06-20 10:49:37.512 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.WebSocket-webSocket:didReceiveMessage:>: started
+2014-06-20 10:49:37.523 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationComponent-dataReceivedFromSocket:>: started
+2014-06-20 10:49:37.528 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-notificationReceived:>: started
+2014-06-20 10:49:37.531 MobileSDKArchitectureDemo[4728:60b] [TRACE] <NotificationEngine.NotificationEngine-notificationReceived:>: Received notificationMessage eventType: callEnd
+2014-06-20 10:49:37.535 MobileSDKArchitectureDemo[4728:60b] [TRACE] <NotificationEngine.NotificationEngine-notificationReceived:>: Received notificationMessage parameters: {
+    callNotificationParams =     {
+        calleeDisplayNumber = gamze3;
+        callerDisplayNumber = gamze1;
+        callerName = "gamze1 erdogan1";
+    };
+    sessionParams =     {
+        sessionData = "(77157156_0efbfc5e_1833f15a-67c9-4c24-b5fb-6d20bd6bc010:2144048b644640e43d66069a790a875cdfed74b@47.168.116.57:19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$(19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$d3ZtMzItYXNpcGMtMQ%3D%3D%0A";
+    };
+}
+2014-06-20 10:49:37.539 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-notificationReceived:>: started
+2014-06-20 10:49:37.541 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-getCallId>: started
+2014-06-20 10:49:37.542 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-getCallId>: finished
+2014-06-20 10:49:37.545 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-disposeCall>: started
+2014-06-20 10:49:37.547 MobileSDKArchitectureDemo[4728:60b] [INFO] <CallService.IncomingCall-disposeCall>: Disposing the call
+2014-06-20 10:49:37.548 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-dispose>: started
+2014-06-20 10:49:37.551 MobileSDKArchitectureDemo[4728:60b] [INFO] <WebRTC.WebRTCCall-dispose>: Releasing allocated video and connection resources
+Warning(statscollector.cc:1049): The SSRC 1145678608 is not associated with a receiving track
+Session:7698247037890405243 Old state:STATE_INPROGRESS New state:STATE_RECEIVEDTERMINATE Type:urn:xmpp:jingle:apps:rtp:1 Transport:http://www.google.com/transport/p2p
+2014-06-20 10:49:37.561 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:iceConnectionChanged:>: iceConnectionChanged type is 6
+2014-06-20 10:49:37.562 MobileSDKArchitectureDemo[4728:7d07] [INFO] <WebRTC.PCObserver-peerConnection:signalingStateChanged:>: signalingStateChanged type is 5
+Channel disabled
+Stopping playout for channel #0
+Clearing option overrides.
+Changing voice state, recv=0 send=0
+webrtc: (neteq_impl.cc:112): Deleting NetEqImpl object.
+2014-06-20 10:49:37.648 MobileSDKArchitectureDemo[4728:6633] [VERBOSE] <WebRTC.WebRTCCall-audioRouteChanged:>: started
+Destroyed channel
+Channel disabled
+webrtc: (vie_base_impl.cc:301): StopSend: StopSend 0
+Changing video state, recv=0 send=0
+webrtc: (vie_base_impl.cc:78): RegisterCpuOveruseObserver: RegisterCpuOveruseObserver on channel 0
+webrtc: (vie_codec_impl.cc:473): DeregisterEncoderObserver for channel 0
+webrtc: (vie_capture_impl.cc:181): DisconnectCaptureDevice 0
+webrtc: (vie_capture_impl.cc:125): ReleaseCaptureDevice 4097
+webrtc: (vie_render_impl.cc:135): RemoveRenderer: render_id: 0
+Warning(webrtcvideoengine.cc:1507): webrtc: Stop: Not running
+webrtc: (vie_network_impl.cc:94): DeregisterSendTransport: channel: 0
+Removing video stream 0 with VideoEngine channel #0
+webrtc: (vie_codec_impl.cc:506): DeregisterDecodeObserver for channel 0
+webrtc: (vie_base_impl.cc:228): Channel deleted 0
+Destroyed channel
+2014-06-20 10:49:37.722 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-dispose>: finished
+2014-06-20 10:49:37.723 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCallManager-removeWebRTCCallFromList:>: started
+2014-06-20 10:49:37.724 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCallManager-removeWebRTCCallFromList:>: finished
+2014-06-20 10:49:37.725 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-removeFromCalls:>: started
+2014-06-20 10:49:37.726 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-removeFromCalls:>: finished
+2014-06-20 10:49:37.727 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-disposeCall>: finished
+2014-06-20 10:49:37.728 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-setCallState:>: started
+2014-06-20 10:49:37.729 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-setCallState:>: started
+2014-06-20 10:49:37.730 MobileSDKArchitectureDemo[4728:60b] [INFO] <WebRTC.WebRTCCall-setCallState:>: Call State Changed to 6
+2014-06-20 10:49:37.731 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-webRTCCallStatusChanged:>: started
+2014-06-20 10:49:37.732 MobileSDKArchitectureDemo[4728:60b] callStatusChanged of CallManager class is fired
+2014-06-20 10:49:37.739 MobileSDKArchitectureDemo[4728:60b] -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+- Call End 0
+2014-06-20 10:49:37.740 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-webRTCCallStatusChanged:>: finished
+2014-06-20 10:49:37.742 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-setCallState:>: finished
+2014-06-20 10:49:37.743 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-setCallState:>: finished
+2014-06-20 10:49:37.744 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-notificationReceived:>: finished
+2014-06-20 10:49:37.745 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <IMService.IMService-notificationReceived:>: started
+2014-06-20 10:49:37.746 MobileSDKArchitectureDemo[4728:60b] [INFO] <IMService.IMService-notificationReceived:>: NotificationHandleDelegate's notificationReceived method is invoked
+2014-06-20 10:49:37.747 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <IMService.IMService-notificationReceived:>: finished
+2014-06-20 10:49:37.748 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <PresenceService.PresenceService-notificationReceived:>: started
+2014-06-20 10:49:37.749 MobileSDKArchitectureDemo[4728:60b] [INFO] <PresenceService.PresenceService-notificationReceived:>: Incoming notification event type: callEnd
+2014-06-20 10:49:37.750 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <PresenceService.PresenceService-notificationReceived:>: finished
+2014-06-20 10:49:37.751 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationEngine-notificationReceived:>: finished
+2014-06-20 10:49:37.752 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <NotificationEngine.NotificationComponent-dataReceivedFromSocket:>: finished
+Error(webrtcsession.cc:959): SetAudioPlayout: No audio channel exists.
+Error(webrtcsession.cc:980): SetAudioSend: No audio channel exists.
+Warning(webrtcsession.cc:1018): Video not used in this call.
+Warning(webrtcsession.cc:1051): SetVideoSend: No video channel exists.
+Camera 'com.apple.avfoundation.avcapturedevice.built-in_video:1' stopped after capturing 445 frames and dropping 0%
+Session:7698247037890405243 Old state:STATE_RECEIVEDTERMINATE New state:STATE_DEINIT Type:urn:xmpp:jingle:apps:rtp:1 Transport:http://www.google.com/transport/p2p
+2014-06-20 10:49:39.568 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-endCall>: started
+2014-06-20 10:49:39.570 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-disposeCall>: started
+2014-06-20 10:49:39.571 MobileSDKArchitectureDemo[4728:60b] [INFO] <CallService.IncomingCall-disposeCall>: Disposing the call
+2014-06-20 10:49:39.572 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-dispose>: started
+2014-06-20 10:49:39.573 MobileSDKArchitectureDemo[4728:60b] [INFO] <WebRTC.WebRTCCall-dispose>: Releasing allocated video and connection resources
+2014-06-20 10:49:39.574 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCall-dispose>: finished
+2014-06-20 10:49:39.575 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCallManager-removeWebRTCCallFromList:>: started
+2014-06-20 10:49:39.577 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <WebRTC.WebRTCCallManager-removeWebRTCCallFromList:>: finished
+2014-06-20 10:49:39.579 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-removeFromCalls:>: started
+2014-06-20 10:49:39.580 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-removeFromCalls:>: finished
+2014-06-20 10:49:39.582 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-disposeCall>: finished
+2014-06-20 10:49:39.583 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-sendEndCallRequest>: started
+2014-06-20 10:49:39.585 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-getCallId>: started
+2014-06-20 10:49:39.586 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-getCallId>: finished
+2014-06-20 10:49:39.588 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestDeleteRequest-init:andServiceUrlSuffix:>: finished
+2014-06-20 10:49:39.590 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestDeleteRequest-init:>: finished
+2014-06-20 10:49:39.592 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestManager-execute:andHandler:>: started
+2014-06-20 10:49:39.593 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestDeleteRequest-initWithRequest>: started
+2014-06-20 10:49:39.595 MobileSDKArchitectureDemo[4728:60b] [TRACE] <RestManager.RestDeleteRequest-initWithRequest>: Created rest request url: http://47.168.150.32:8580/rest/version/1/user/gamze3@spidr.com/callControl/callSessions/(77157156_0efbfc5e_1833f15a-67c9-4c24-b5fb-6d20bd6bc010:2144048b644640e43d66069a790a875cdfed74b@47.168.116.57:19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$(19d23709-373a-437b-8ba9-2c51204c64a5:wae-base-sipt)$d3ZtMzItYXNpcGMtMQ%3D%3D%0A
+2014-06-20 10:49:39.597 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestDeleteRequest-addHeaderParameters>: started
+2014-06-20 10:49:39.599 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestDeleteRequest-addHeaderParameters>: finished
+2014-06-20 10:49:39.601 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestDeleteRequest-initWithRequest>: finished
+2014-06-20 10:49:39.603 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-execute:>: started
+2014-06-20 10:49:39.606 MobileSDKArchitectureDemo[4728:60b] Reachability Flag Status: -R -----l- networkStatusForFlags
+2014-06-20 10:49:39.609 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-execute:>: finished
+2014-06-20 10:49:39.612 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestManager-execute:andHandler:>: finished
+2014-06-20 10:49:39.613 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-sendEndCallRequest>: finished
+2014-06-20 10:49:39.615 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.IncomingCall-endCall>: finished
+2014-06-20 10:49:39.616 MobileSDKArchitectureDemo[4728:60b] inside Registration Model - unregisterfromserver
+2014-06-20 10:49:39.618 MobileSDKArchitectureDemo[4728:60b]  found register entity
+2014-06-20 10:49:39.620 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RegistrationService.Registration-unRegisterFromServer>: started
+2014-06-20 10:49:39.621 MobileSDKArchitectureDemo[4728:60b] [INFO] <RegistrationService.Registration-unRegisterFromServer>: ServiceUrlSuffix : /subscription/Z2FtemUzLXNwaWRyLmNvbTg2Nzc1NjAwMDk4ODk3Nw
+2014-06-20 10:49:39.623 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestDeleteRequest-init:andServiceUrlSuffix:>: finished
+2014-06-20 10:49:39.625 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestDeleteRequest-init:>: finished
+2014-06-20 10:49:39.627 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-endAllCalls>: started
+2014-06-20 10:49:39.628 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallService.CallService-endAllCalls>: finished
+2014-06-20 10:49:39.630 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestManager-execute:andHandler:>: started
+2014-06-20 10:49:39.631 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestDeleteRequest-initWithRequest>: started
+2014-06-20 10:49:39.633 MobileSDKArchitectureDemo[4728:60b] [TRACE] <RestManager.RestDeleteRequest-initWithRequest>: Created rest request url: http://47.168.150.32:8580/rest/version/1/user/gamze3@spidr.com/subscription/Z2FtemUzLXNwaWRyLmNvbTg2Nzc1NjAwMDk4ODk3Nw
+2014-06-20 10:49:39.635 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestDeleteRequest-addHeaderParameters>: started
+2014-06-20 10:49:39.637 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestDeleteRequest-addHeaderParameters>: finished
+2014-06-20 10:49:39.639 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestDeleteRequest-initWithRequest>: finished
+2014-06-20 10:49:39.641 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-execute:>: started
+2014-06-20 10:49:39.644 MobileSDKArchitectureDemo[4728:60b] Reachability Flag Status: -R -----l- networkStatusForFlags
+2014-06-20 10:49:39.646 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-execute:>: finished
+2014-06-20 10:49:39.651 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestManager-execute:andHandler:>: finished
+2014-06-20 10:49:39.657 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RegistrationService.Registration-unRegisterFromServer>: finished
+2014-06-20 10:49:39.785 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveResponse:>: started
+2014-06-20 10:49:39.787 MobileSDKArchitectureDemo[4728:60b] [TRACE] <RestManager.RestConnection-connection:didReceiveResponse:>: Received response code : 200
+2014-06-20 10:49:39.788 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveResponse:>: finished
+2014-06-20 10:49:39.789 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveData:>: started
+2014-06-20 10:49:39.790 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveData:>: finished
+2014-06-20 10:49:39.797 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connectionDidFinishLoading:>: started
+2014-06-20 10:49:39.799 MobileSDKArchitectureDemo[4728:60b] [INFO] <RestManager.RestConnection-connectionDidFinishLoading:>: Asynchronous rest request was completed successfully
+2014-06-20 10:49:39.800 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallEndResponseHandler-onFinish:>: started
+2014-06-20 10:49:39.803 MobileSDKArchitectureDemo[4728:60b] [INFO] <CallEndResponseHandler-onFinish:>: CallEndResponseHandler Call End request is successfully sent
+2014-06-20 10:49:39.809 MobileSDKArchitectureDemo[4728:60b] -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+- End call 0
+2014-06-20 10:49:39.810 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <CallEndResponseHandler-onFinish:>: finished
+2014-06-20 10:49:39.813 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connectionDidFinishLoading:>: finished
+2014-06-20 10:49:39.846 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveResponse:>: started
+2014-06-20 10:49:39.847 MobileSDKArchitectureDemo[4728:60b] [TRACE] <RestManager.RestConnection-connection:didReceiveResponse:>: Received response code : 200
+2014-06-20 10:49:39.850 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveResponse:>: finished
+2014-06-20 10:49:39.852 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveData:>: started
+2014-06-20 10:49:39.855 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connection:didReceiveData:>: finished
+2014-06-20 10:49:39.856 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connectionDidFinishLoading:>: started
+2014-06-20 10:49:39.857 MobileSDKArchitectureDemo[4728:60b] [INFO] <RestManager.RestConnection-connectionDidFinishLoading:>: Asynchronous rest request was completed successfully
+2014-06-20 10:49:39.861 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RegistrationService.UnregisterResponseHandler-onFinish:>: started
+2014-06-20 10:49:39.864 MobileSDKArchitectureDemo[4728:60b] [INFO] <RegistrationService.UnregisterResponseHandler-onFinish:>: Status code : 0
+2014-06-20 10:49:39.865 MobileSDKArchitectureDemo[4728:60b] [INFO] <RegistrationService.UnregisterResponseHandler-onFinish:>: Unregister request is successfully sent
+2014-06-20 10:49:39.867 MobileSDKArchitectureDemo[4728:60b] unregister OK
+2014-06-20 10:49:39.871 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RegistrationService.UnregisterResponseHandler-onFinish:>: finished
+2014-06-20 10:49:39.872 MobileSDKArchitectureDemo[4728:60b] [VERBOSE] <RestManager.RestConnection-connectionDidFinishLoading:>: finished
