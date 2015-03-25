@@ -1,325 +1,184 @@
 package seniorproject;
 
+import javax.swing.JFrame;
+
 import java.awt.BorderLayout;
+import java.awt.ScrollPane;
+
+import javax.swing.JPanel;
+import javax.swing.JButton;
+
 import java.awt.FlowLayout;
-import java.awt.Font;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.GridLayout;
-import java.awt.Insets;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 import javax.swing.JTextField;
-import javax.swing.JTextPane;
 import javax.swing.SwingConstants;
-import javax.swing.ScrollPaneConstants;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+import javax.swing.JTextPane;
+import javax.swing.JComboBox;
+import javax.swing.JDesktopPane;
+import javax.swing.JInternalFrame;
+import javax.swing.JEditorPane;
 
-/*
- * @author Erdi Koç
- * @author Deniz Ýskender
- * 
- * */
-
-public class ParserScreen extends javax.swing.JFrame {
-	
-	public static void main(String args[]) {
-		/* Set the Nimbus look and feel */
-		// <editor-fold defaultstate="collapsed"
-		// desc=" Look and feel setting code (optional) ">
-		/*
-		 * If Nimbus (introduced in Java SE 6) is not available, stay with the
-		 * default look and feel. For details see
-		 * http://download.oracle.com/javase
-		 * /tutorial/uiswing/lookandfeel/plaf.html
-		 */
-		try {
-			for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager
-					.getInstalledLookAndFeels()) {
-				if ("Nimbus".equals(info.getName())) {
-					javax.swing.UIManager.setLookAndFeel(info.getClassName());
-					break;
-				}
-			}
-		} catch (ClassNotFoundException ex) {
-			java.util.logging.Logger.getLogger(StartScreen.class.getName()).log(
-					java.util.logging.Level.SEVERE, null, ex);
-		} catch (InstantiationException ex) {
-			java.util.logging.Logger.getLogger(StartScreen.class.getName()).log(
-					java.util.logging.Level.SEVERE, null, ex);
-		} catch (IllegalAccessException ex) {
-			java.util.logging.Logger.getLogger(StartScreen.class.getName()).log(
-					java.util.logging.Level.SEVERE, null, ex);
-		} catch (javax.swing.UnsupportedLookAndFeelException ex) {
-			java.util.logging.Logger.getLogger(StartScreen.class.getName()).log(
-					java.util.logging.Level.SEVERE, null, ex);
-		}
-		// </editor-fold>
-
-		/* Create and display the form */
-		java.awt.EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				new StartScreen().setVisible(true);
-			}
-		});
-	}
-	private JFrame frmLogParserTool;
-	private JScrollPane allPanelWindow;
-	private JPanel upPanel;
-	private JButton upButton;
-	private JButton downButton;
-	private JButton chartButton;
-	private JButton markAllButton;
-	private JButton saveAsButton;
-	private JPanel loggingLevelsPanel;
-	private JButton warnButton;
-	private JButton verboseButton;
-	private JButton infoButton;
-	private JButton traceButton;
-	private JButton debugButton;
-	private JLabel LoggingLevelsLabel;
-	private JButton errorButton;
-	private JButton fatalButton;
-	private JLabel offLabel;
-	private JPanel searchPanel;
-	private JLabel enterWordLabel;
+public class ParserScreen {
+	private JFrame frame;
 	private JTextField textField;
-	private JButton searchButton;
-	private JButton editFileButton;
-	private JButton exitButton;
-	private JButton save;
-	private JButton loadFileButton;
-	private JButton timeChart;
-	private JButton maximizeButton;
-	private JButton zipButton;
-	private JPanel timeBarPanel;
-	private JPanel textAreaPanel;
-	private JScrollPane scrollPane;
-
-
-	public ParserScreen() {
-
-		iniComponents();
-
-	}
-
-
-
-	private void iniComponents() {
-		frmLogParserTool = new JFrame("LOG PARSER TOOL");
-		frmLogParserTool.setTitle("LOG PARSER TOOL");
-		frmLogParserTool.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		frmLogParserTool.setSize(getWidth(), getHeight());
-		frmLogParserTool.setBounds(0, 0, 1250, 592);
-
-
-
-		allPanelWindow = new JScrollPane();
-
-		frmLogParserTool.getContentPane().setLayout(new BorderLayout());
-		frmLogParserTool.getContentPane().add(allPanelWindow, BorderLayout.CENTER);
-
-		upPanel = new JPanel();
-		FlowLayout flowLayout = (FlowLayout) upPanel.getLayout();
-		flowLayout.setHgap(3);
-		flowLayout.setAlignment(FlowLayout.LEADING);
-		allPanelWindow.setColumnHeaderView(upPanel);
-
-		save = new JButton("Save");
-		save.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\smallsaveicon.png"));
-		save.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		upPanel.add(save);
-
-		saveAsButton = new JButton("Save as");
-		saveAsButton.setHorizontalAlignment(SwingConstants.TRAILING);
-		saveAsButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\toolbar_saveAs.png"));
-		upPanel.add(saveAsButton);
-
-		upButton = new JButton("Up");
-		upButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\upArrow.png"));
-		upPanel.add(upButton);
-
-		downButton = new JButton("Down");
-		downButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\arrow-down-circle.png"));
-		upPanel.add(downButton);
-
-		chartButton = new JButton("Log Charts");
-		chartButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\url.jpg"));
-		upPanel.add(chartButton);
-
-		timeChart = new JButton("Time Statistics");
-		timeChart.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\21stCHART.jpg"));
-		upPanel.add(timeChart);
-
-		markAllButton = new JButton("Mark All");
-		markAllButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		markAllButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\ecc239b23d8e0da79a1aa90f0a831a21.jpg"));
-		upPanel.add(markAllButton);
-
-		loadFileButton = new JButton("Load File");
-		loadFileButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\file-plus.png"));
-		upPanel.add(loadFileButton);
-
-		zipButton = new JButton("Zip");
-		zipButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\1417987851_ikon_winzip.png"));
-		upPanel.add(zipButton);
-
-		maximizeButton = new JButton("Maximize");
-		maximizeButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\v4-popup.png"));
-		upPanel.add(maximizeButton);
-
-		loggingLevelsPanel = new JPanel();
-		allPanelWindow.setRowHeaderView(loggingLevelsPanel);
-		loggingLevelsPanel.setLayout(new GridLayout(0, 1, 0, 0));
-
-		LoggingLevelsLabel = new JLabel("Logging Levels : ");
-		LoggingLevelsLabel.setFont(new Font("Stencil", Font.PLAIN, 16));
-		loggingLevelsPanel.add(LoggingLevelsLabel);
-
-		verboseButton = new JButton("Verbose");
-		verboseButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\0086822.jpg"));
-		loggingLevelsPanel.add(verboseButton);
-
-		traceButton = new JButton("Trace");
-		traceButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\makethumb.jpg"));
-		loggingLevelsPanel.add(traceButton);
-
-		debugButton = new JButton("Debug");
-		debugButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		debugButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\url.png"));
-		loggingLevelsPanel.add(debugButton);
-
-		infoButton = new JButton("Info");
-		infoButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\icon-info.png"));
-		loggingLevelsPanel.add(infoButton);
-
-		warnButton = new JButton("Warn");
-		warnButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\Sys_Warn.png"));
-		warnButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		loggingLevelsPanel.add(warnButton);
-
-		errorButton = new JButton("Error");
-		errorButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\red_cross.gif"));
-		loggingLevelsPanel.add(errorButton);
-
-		fatalButton = new JButton("Fatal");
-		fatalButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\322.jpg"));
-		loggingLevelsPanel.add(fatalButton);
-
-		offLabel = new JLabel();
-		offLabel.setEnabled(false);
-		loggingLevelsPanel.add(offLabel);
-
-
-		JPanel downPanel = new JPanel();
-		allPanelWindow.setViewportView(downPanel);
-		GridBagLayout gbl_downPanel = new GridBagLayout();
-		gbl_downPanel.columnWidths = new int[] {0, 1};
-		gbl_downPanel.rowHeights = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3};
-		gbl_downPanel.columnWeights = new double[]{1.0, Double.MIN_VALUE};
-		gbl_downPanel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, Double.MIN_VALUE};
-		downPanel.setLayout(gbl_downPanel);
-
-		textAreaPanel = new JPanel();
-		textAreaPanel.setLayout(null);
-		GridBagConstraints gbc_panel_2 = new GridBagConstraints();
-		gbc_panel_2.gridheight = 14;
-		gbc_panel_2.insets = new Insets(0, 0, 5, 0);
-		gbc_panel_2.fill = GridBagConstraints.BOTH;
-		gbc_panel_2.gridx = 0;
-		gbc_panel_2.gridy = 0;
-		downPanel.add(textAreaPanel, gbc_panel_2);
-
-		scrollPane = new JScrollPane();
-		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-		scrollPane.setBounds(10, 11, 1073, 363);
-
-
-
-		JTextPane textPane = new JTextPane();
-		scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-		textAreaPanel.add(scrollPane);
-		scrollPane.setViewportView(textPane);
-
-
-		timeBarPanel = new JPanel();
-		GridBagConstraints gbc_panel = new GridBagConstraints();
-		gbc_panel.gridheight = 3;
-		gbc_panel.insets = new Insets(0, 0, 5, 0);
-		gbc_panel.fill = GridBagConstraints.BOTH;
-		gbc_panel.gridx = 0;
-		gbc_panel.gridy = 14;
-		downPanel.add(timeBarPanel, gbc_panel);
-
-		searchPanel = new JPanel();
-		FlowLayout flowLayout_1 = (FlowLayout) searchPanel.getLayout();
-		flowLayout_1.setAlignment(FlowLayout.LEADING);
-		GridBagConstraints gbc_panel_4 = new GridBagConstraints();
-		gbc_panel_4.anchor = GridBagConstraints.WEST;
-		gbc_panel_4.fill = GridBagConstraints.VERTICAL;
-		gbc_panel_4.gridx = 0;
-		gbc_panel_4.gridy = 17;
-		downPanel.add(searchPanel, gbc_panel_4);
-
-		enterWordLabel = new JLabel("Enter Word");
-		searchPanel.add(enterWordLabel);
-
-		textField = new JTextField();
-		searchPanel.add(textField);
-		textField.setColumns(85);
-
-		searchButton = new JButton("Search");
-		searchButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\search_icon_big.gif"));
-		searchButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		searchPanel.add(searchButton);
-
-		editFileButton = new JButton("Edit File");
-		editFileButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\imgres.jpg"));
-		searchPanel.add(editFileButton);
-
-		exitButton = new JButton("Exit");
-		exitButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				System.exit(0);
-			}
-		});
-		exitButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\exit.gif"));
-		searchPanel.add(exitButton);
+	
+	
+	public ParserScreen(){
+		frame = new JFrame();
+		frame.getContentPane().setLayout(new BorderLayout(0, 0));
 		
-		frmLogParserTool.setResizable(true);
-		frmLogParserTool.pack();
-		frmLogParserTool.setVisible(true);
-	}
-
-
-
-	public void parseiOSLog(String fileName) {
-
-
-	}
-
-	public void parseAndroidLog(String fileName) {
-
+		JPanel topPanel = new JPanel();
+		FlowLayout flowLayout = (FlowLayout) topPanel.getLayout();
+		flowLayout.setAlignment(FlowLayout.LEFT);
+		flowLayout.setHgap(3);
+		frame.getContentPane().add(topPanel, BorderLayout.NORTH);
+		
+		JButton saveButton = new JButton("Save");
+		saveButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\smallsaveicon.png"));
+		saveButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		topPanel.add(saveButton);
+		
+		JButton saveAs = new JButton("Save As");
+		saveAs.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\toolbar_saveAs.png"));
+		topPanel.add(saveAs);
+		
+		JButton saveAllButton = new JButton("Save all");
+		saveAllButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\1417987851_ikon_winzip.png"));
+		topPanel.add(saveAllButton);
+		
+		JButton loadFileButton = new JButton("Load File");
+		loadFileButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\file-plus.png"));
+		topPanel.add(loadFileButton);
+		
+		JButton editFileButton = new JButton("Edit File");
+		editFileButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\imgres.jpg"));
+		topPanel.add(editFileButton);
+		
+		JButton loggingChartButton = new JButton("Log Capacity Chart");
+		loggingChartButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\url.jpg"));
+		topPanel.add(loggingChartButton);
+		
+		JButton logStatisticalChart = new JButton("Time Statistical Chart");
+		logStatisticalChart.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\21stCHART.jpg"));
+		topPanel.add(logStatisticalChart);
+		
+		JPanel panel = new JPanel();
+		frame.getContentPane().add(panel, BorderLayout.WEST);
+		
+		JButton verboseButton = new JButton("Verbose");
+		verboseButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\0086822.jpg"));
+		
+		JButton traceButton = new JButton("Trace");
+		traceButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\makethumb.jpg"));
+		
+		JLabel loggingLevelLabel = new JLabel("Log Levels :");
+		
+		JButton debugButton = new JButton("Debug");
+		debugButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\icon-bed-bug.png"));
+		debugButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		
+		JButton infoButton = new JButton("Info");
+		infoButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\icon-info.png"));
+		
+		JButton warnButton = new JButton("Warn");
+		warnButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\Sys_Warn.png"));
+		
+		JButton errorButton = new JButton("Error");
+		errorButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\red_cross.gif"));
+		
+		JButton fatalButton = new JButton("Fatal");
+		fatalButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\322.jpg"));
+		GroupLayout gl_panel = new GroupLayout(panel);
+		gl_panel.setHorizontalGroup(
+			gl_panel.createParallelGroup(Alignment.TRAILING)
+				.addGroup(gl_panel.createSequentialGroup()
+					.addContainerGap()
+					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
+						.addComponent(verboseButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+						.addComponent(traceButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+						.addComponent(debugButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+						.addComponent(infoButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+						.addComponent(warnButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+						.addComponent(errorButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+						.addComponent(fatalButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+						.addComponent(loggingLevelLabel))
+					.addContainerGap())
+		);
+		gl_panel.setVerticalGroup(
+			gl_panel.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel.createSequentialGroup()
+					.addComponent(loggingLevelLabel)
+					.addGap(5)
+					.addComponent(verboseButton)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(traceButton)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(debugButton)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(infoButton)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(warnButton)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(errorButton)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(fatalButton)
+					.addContainerGap(16, Short.MAX_VALUE))
+		);
+		panel.setLayout(gl_panel);
+		
+		JPanel southPanel = new JPanel();
+		FlowLayout flowLayout_1 = (FlowLayout) southPanel.getLayout();
+		flowLayout_1.setAlignment(FlowLayout.RIGHT);
+		frame.getContentPane().add(southPanel, BorderLayout.SOUTH);
+		
+		JLabel searchLabel = new JLabel("Enter a word");
+		southPanel.add(searchLabel);
+		
+		textField = new JTextField();
+		textField.setHorizontalAlignment(SwingConstants.LEFT);
+		southPanel.add(textField);
+		textField.setColumns(40);
+		
+		JButton searchButton = new JButton("Search");
+		searchButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\search_icon_big.gif"));
+		southPanel.add(searchButton);
+		
+		JButton upButton = new JButton("Up");
+		upButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\upArrow.png"));
+		southPanel.add(upButton);
+		
+		JButton downButton = new JButton("Down");
+		downButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\arrow-down-circle.png"));
+		southPanel.add(downButton);
+		
+		JButton markButton = new JButton("Mark All");
+		markButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\ecc239b23d8e0da79a1aa90f0a831a21.jpg"));
+		southPanel.add(markButton);
+		
+		JButton exitButton = new JButton("Exit");
+		exitButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\exit.gif"));
+		southPanel.add(exitButton);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		JTextPane textPane = new JTextPane();
+		scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+		scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		scrollPane.setViewportView(textPane);
+		frame.getContentPane().add(scrollPane, BorderLayout.CENTER);
 	}
 }
