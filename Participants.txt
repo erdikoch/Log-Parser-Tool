@@ -1,4 +1,4 @@
 Log-Parser Tool Desktop Application Team :
 
 1-Erdi Koç
-2-Emre Fýndýk
+2-Deniz Ýskender
