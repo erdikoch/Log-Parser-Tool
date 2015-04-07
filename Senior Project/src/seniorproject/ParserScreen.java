@@ -1,4 +1,4 @@
-package seniorproject;
+package parserTool;
 
 import javax.swing.JFrame;
 
@@ -26,6 +26,7 @@ import javax.swing.JComboBox;
 import javax.swing.JDesktopPane;
 import javax.swing.JInternalFrame;
 import javax.swing.JEditorPane;
+import java.awt.Font;
 
 public class ParserScreen {
 	private JFrame frame;
@@ -84,6 +85,7 @@ public class ParserScreen {
 		traceButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\makethumb.jpg"));
 		
 		JLabel loggingLevelLabel = new JLabel("Log Levels :");
+		loggingLevelLabel.setFont(new Font("Tahoma", Font.BOLD, 13));
 		
 		JButton debugButton = new JButton("Debug");
 		debugButton.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\icon-bed-bug.png"));
@@ -106,17 +108,17 @@ public class ParserScreen {
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(
 			gl_panel.createParallelGroup(Alignment.TRAILING)
-				.addGroup(gl_panel.createSequentialGroup()
+				.addGroup(Alignment.LEADING, gl_panel.createSequentialGroup()
 					.addContainerGap()
 					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
+						.addComponent(loggingLevelLabel, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)
 						.addComponent(verboseButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
 						.addComponent(traceButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
 						.addComponent(debugButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
 						.addComponent(infoButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
 						.addComponent(warnButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 						.addComponent(errorButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-						.addComponent(fatalButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-						.addComponent(loggingLevelLabel))
+						.addComponent(fatalButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))
 					.addContainerGap())
 		);
 		gl_panel.setVerticalGroup(
@@ -137,7 +139,7 @@ public class ParserScreen {
 					.addComponent(errorButton)
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(fatalButton)
-					.addContainerGap(16, Short.MAX_VALUE))
+					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 		);
 		panel.setLayout(gl_panel);
 		
