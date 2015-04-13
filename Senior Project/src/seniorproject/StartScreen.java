@@ -18,6 +18,7 @@ import javax.swing.JButton;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.io.FileNotFoundException;
 
 import javax.swing.ImageIcon;
 import javax.swing.JRadioButton;
@@ -108,9 +109,14 @@ public class StartScreen {
 									JOptionPane.showMessageDialog(startScreenFrame,
 											"No file selected");
 								} else if (androidLogRadioButton.isSelected()) {
-									ParserScreen parser = new ParserScreen();
+									try {
+										ParserScreen parser = new ParserScreen(pathTextField.getText());
+									} catch (FileNotFoundException e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									}
 								} else if (iOSLogRadioButton.isSelected()) {
-									ParserScreen parser = new ParserScreen();
+									//ParserScreen parser = new ParserScreen(pathTextField.getText());
 								}
 
 							}
