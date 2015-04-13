@@ -134,7 +134,7 @@ public class ParserScreen {
 
 			public void actionPerformed(ActionEvent e) {
 				try {
-					StatisticalChart chart = new StatisticalChart();
+					LoggingLevelStatisticalChart chart = new LoggingLevelStatisticalChart();
 				} catch (FileNotFoundException e1) {
 					e1.printStackTrace();
 				}
