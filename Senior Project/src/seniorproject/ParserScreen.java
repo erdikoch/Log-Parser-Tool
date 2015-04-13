@@ -15,6 +15,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
@@ -28,25 +29,31 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.JTextPane;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.SwingConstants;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DefaultHighlighter;
-import javax.swing.text.Document;
 import javax.swing.text.Highlighter;
-import javax.swing.JRadioButton;
 
 public class ParserScreen {
 
 	private JFrame frame;
 	private JTextField textField;
 	private Highlighter.HighlightPainter painter;
-	final JTextArea textArea = new JTextArea();
+	final JTextPane textArea = new JTextPane();
 	private JTextField customTagTextField;
+	private String existingText = "";
+	private ArrayList<Integer> textPositions = new ArrayList<Integer>();
+	private Object yellowHighlighter = null;
+	private static int NO_MORE_INSTANCES = -1;
 
+
+	
 	public ParserScreen(String fileName) throws FileNotFoundException {
 		frame = new JFrame();
 		frame.getContentPane().setLayout(new BorderLayout(0, 0));
@@ -57,6 +64,7 @@ public class ParserScreen {
 		flowLayout.setHgap(3);
 		frame.getContentPane().add(topPanel, BorderLayout.NORTH);
 
+		textArea.setOpaque(true);
 		JButton saveButton = new JButton("Save");
 		saveButton
 				.setIcon(new ImageIcon(
@@ -205,7 +213,8 @@ public class ParserScreen {
 					while (scanner.hasNextLine()) {
 						line = scanner.nextLine();
 						if (line.contains(customTagTextField.getText())) {
-							textArea.append(line + "\n");
+							textArea.setText(textArea.getText()+line);
+							textArea.setText(textArea.getText()+"\n");
 							textArea.setForeground(Color.BLACK);
 						}
 					}
@@ -354,36 +363,137 @@ public class ParserScreen {
 		searchButton.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent arg0) {
-				if (textField.getText().isEmpty()) {
-					JOptionPane.showMessageDialog(frame,
-							"Please write a word to search");
-
-				} else if (textArea.getText().isEmpty()) {
-					JOptionPane.showMessageDialog(frame,
-							"There is no data to search in the text area");
+				if (textArea.getText().isEmpty()) {
+					JOptionPane.showMessageDialog(null, "No text in view");
 				} else {
+					String newText = textField.getText().toLowerCase();
 
-					Highlighter hilite = textArea.getHighlighter();
-					Highlighter.HighlightPainter painter = new DefaultHighlighter.DefaultHighlightPainter(
-							Color.GREEN);
-
-					String pattern = textField.getText();
-					Document doc = textArea.getDocument();
-					try {
-						String text = doc.getText(0, doc.getLength());
-						int pos = 0;
-
-						while ((pos = text.toUpperCase().indexOf(
-								pattern.toUpperCase(), pos)) >= 0) {
-							hilite.addHighlight(pos, pos + pattern.length(),
-									painter);
-							pos += pattern.length();
+					// Terminates without any action if input string is empty
+					if (newText.equals("")) {
+						if (existingText.equals("")) {
+							return;
+						} else {
+							selectNextInstanceOfText();
 						}
+					} else {
 
+						// Check whether the user is trying to find the next instance of
+						// a string that was already searched in the text area or
+						// the user is searching for a new string in the text area
+						if (!newText.equals(existingText)) {
+							find(newText, textArea);
+						} else {
+							selectNextInstanceOfText();
+						}
+					}
+				}
+			}
+
+			private void find(String newText, JTextPane textArea) {
+				textPositions = new ArrayList<Integer>();
+
+				// For case insensitivity
+				String lowerCaseText = textArea.getText().toLowerCase();
+
+				textArea.getHighlighter().removeAllHighlights();
+				existingText = newText;
+				int startPositionInTextArea = 0;
+				int endPositionInTextArea = 0;
+
+				// Used to highlight first instance of text yellow in TextLayout
+				boolean firstPosition = (textArea == textArea);
+
+				// Find all instances of the string in the text area
+				// and highlight them
+				while (endPositionInTextArea < textArea.getText().length()) {
+					startPositionInTextArea = lowerCaseText.indexOf(existingText,
+							startPositionInTextArea);
+					endPositionInTextArea = startPositionInTextArea
+							+ (existingText.length());
+
+					// Break the while loop if there are no more instances of
+					// the given string to find
+					if (startPositionInTextArea == NO_MORE_INSTANCES) {
+						break;
+					} else {
+						textPositions.add(endPositionInTextArea);
+						try {
+
+							// Highlight the first instance of the string yellow
+							if (firstPosition) {
+								highlightFirstInstanceYellow();
+								firstPosition = false;
+							}
+
+							// Highlight all instances blue
+							textArea.getHighlighter().addHighlight(
+									startPositionInTextArea, endPositionInTextArea,
+									DefaultHighlighter.DefaultPainter);
+						} catch (BadLocationException e) {
+							e.printStackTrace();
+						}
+						startPositionInTextArea++;
+					}
+				}
+				if (firstPosition) {
+				JOptionPane.showMessageDialog(null, "String not found");
+				}
+				
+			}
+
+			private void highlightFirstInstanceYellow() throws BadLocationException {
+				int positionOfFirstInstance = textPositions.get(0);
+				try {
+					textArea.getHighlighter().changeHighlight(yellowHighlighter,
+							positionOfFirstInstance - existingText.length(),
+							positionOfFirstInstance);
+				} catch (NullPointerException e) {
+					yellowHighlighter = textArea.getHighlighter()
+							.addHighlight(
+									positionOfFirstInstance - existingText.length(),
+									positionOfFirstInstance,
+									new DefaultHighlighter.DefaultHighlightPainter(
+											Color.YELLOW));
+				}
+
+				textArea.setCaretPosition(positionOfFirstInstance);
+				
+			}
+
+			private void selectNextInstanceOfText() {
+				try {
+					int selectedTextPosition = textPositions.get((textPositions
+							.indexOf(textArea.getCaretPosition())) + 1);
+					textArea.setCaretPosition(selectedTextPosition);
+					try {
+						textArea.getHighlighter().changeHighlight(yellowHighlighter,
+								selectedTextPosition - existingText.length(),
+								selectedTextPosition);
+					} catch (BadLocationException e) {
+						e.printStackTrace();
+					}
+				} catch (IndexOutOfBoundsException e) {
+					returnToFirstInstanceOfText();
+				}
+				
+			}
+
+			private void returnToFirstInstanceOfText() {
+				if (textArea.getHighlighter().getHighlights().length == 0) {
+					JOptionPane.showMessageDialog(null, "String not found");
+				} else {
+					endOfFileReached();
+					try {
+						highlightFirstInstanceYellow();
 					} catch (BadLocationException e) {
 						e.printStackTrace();
 					}
 				}
+				
+			}
+
+			private void endOfFileReached() {
+				JOptionPane.showMessageDialog(null, "End of file reached");				
 			}
 		});
 
@@ -401,9 +511,19 @@ public class ParserScreen {
 					String line;
 					while (scanner.hasNextLine()) {
 						line = scanner.nextLine();
-
-						textArea.append(line + "\n");
-						textArea.setForeground(Color.BLACK);
+						if(line.contains("V/")){
+							textArea.setBackground(Color.CYAN);
+							textArea.setText(textArea.getText()+line);
+							textArea.setText(textArea.getText()+"\n");
+						//	textArea.setForeground(Color.CYAN);
+						}else{
+							textArea.setForeground(Color.BLACK);
+							textArea.setText(textArea.getText()+line);
+							textArea.setText(textArea.getText()+"\n");
+							
+						}
+						
+					
 					}
 					scanner.close();
 				} catch (FileNotFoundException e1) {
@@ -411,6 +531,7 @@ public class ParserScreen {
 				}
 			}
 		});
+	
 
 		// RADIOBUTTON DEBUG
 		debugButton.addActionListener(new ActionListener() {
@@ -430,8 +551,8 @@ public class ParserScreen {
 					String line;
 					while (scanner.hasNextLine()) {
 						line = scanner.nextLine();
-						textArea.append(line + "\n");
-						textArea.setForeground(Color.BLACK);
+						textArea.setText(textArea.getText()+line);
+						textArea.setText(textArea.getText()+"\n");						textArea.setForeground(Color.BLACK);
 					}
 					scanner.close();
 				} catch (FileNotFoundException e1) {
@@ -459,8 +580,8 @@ public class ParserScreen {
 					String line;
 					while (scanner.hasNextLine()) {
 						line = scanner.nextLine();
-						textArea.append(line + "\n");
-						textArea.setForeground(Color.BLACK);
+						textArea.setText(textArea.getText()+line);
+						textArea.setText(textArea.getText()+"\n");						textArea.setForeground(Color.BLACK);
 					}
 					scanner.close();
 				} catch (FileNotFoundException e1) {
@@ -488,8 +609,8 @@ public class ParserScreen {
 					String line;
 					while (scanner.hasNextLine()) {
 						line = scanner.nextLine();
-						textArea.append(line + "\n");
-						textArea.setForeground(Color.BLACK);
+						textArea.setText(textArea.getText()+line);
+						textArea.setText(textArea.getText()+"\n");						textArea.setForeground(Color.BLACK);
 					}
 					scanner.close();
 				} catch (FileNotFoundException e1) {
@@ -517,8 +638,8 @@ public class ParserScreen {
 					String line;
 					while (scanner.hasNextLine()) {
 						line = scanner.nextLine();
-						textArea.append(line + "\n");
-						textArea.setForeground(Color.BLACK);
+						textArea.setText(textArea.getText()+line);
+						textArea.setText(textArea.getText()+"\n");						textArea.setForeground(Color.BLACK);
 					}
 					scanner.close();
 				} catch (FileNotFoundException e1) {
@@ -586,8 +707,8 @@ public class ParserScreen {
 				textArea.setText("");
 				String nextLine = in.readLine();
 				while (nextLine != null) {
-					textArea.append(nextLine + "\n");
-					nextLine = in.readLine();
+					textArea.setText(textArea.getText()+nextLine);
+					textArea.setText(textArea.getText()+"\n");					nextLine = in.readLine();
 				}
 				in.close();
 			} catch (IOException e) {
