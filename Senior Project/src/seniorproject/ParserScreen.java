@@ -45,6 +45,11 @@ import javax.swing.text.StyledDocument;
 
 import com.orsoncharts.graphics3d.swing.UpAction;
 
+import javax.swing.JCheckBox;
+import javax.swing.UIManager;
+
+import org.jfree.ui.RefineryUtilities;
+
 public class ParserScreen {
 
 	private JFrame frame;
@@ -56,12 +61,15 @@ public class ParserScreen {
 	private ArrayList<Integer> textPositions = new ArrayList<Integer>();
 	private Object yellowHighlighter = null;
 	private static int NO_MORE_INSTANCES = -1;
+	private JTextField replaceFieldText;
+	private JTextField oldStringField;
 
 	public ParserScreen(String fileName) throws FileNotFoundException {
 		frame = new JFrame();
 		frame.getContentPane().setLayout(new BorderLayout(0, 0));
 		textArea.setContentType("text/plain");
 		JPanel topPanel = new JPanel();
+		topPanel.setBackground(new Color(192, 192, 192));
 		FlowLayout flowLayout = (FlowLayout) topPanel.getLayout();
 		flowLayout.setAlignment(FlowLayout.LEFT);
 		flowLayout.setHgap(3);
@@ -153,12 +161,39 @@ public class ParserScreen {
 		});
 
 		JButton logStatisticalChart = new JButton("Time Statistical Chart");
+		logStatisticalChart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TimeStatisticalChart demo;
+				try {
+					demo = new TimeStatisticalChart();
+					  
+				} catch (FileNotFoundException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+		      
+			}
+		});
 		logStatisticalChart
 				.setIcon(new ImageIcon(
 						"C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\21stCHART.jpg"));
 		topPanel.add(logStatisticalChart);
+		
+				JButton exitButton = new JButton("Exit");
+				topPanel.add(exitButton);
+				exitButton
+						.setIcon(new ImageIcon(
+								"C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\exit.gif"));
+				// EXIT BUTTON
+				exitButton.addActionListener(new ActionListener() {
+
+					public void actionPerformed(ActionEvent arg0) {
+						System.exit(0);
+					}
+				});
 
 		JPanel panel = new JPanel();
+		panel.setBackground(new Color(192, 192, 192));
 		frame.getContentPane().add(panel, BorderLayout.WEST);
 
 		final JButton verboseButton = new JButton("Verbose");
@@ -349,6 +384,7 @@ public class ParserScreen {
 		panel.setLayout(gl_panel);
 
 		JPanel southPanel = new JPanel();
+		southPanel.setBackground(new Color(192, 192, 192));
 		FlowLayout flowLayout_1 = (FlowLayout) southPanel.getLayout();
 		flowLayout_1.setAlignment(FlowLayout.RIGHT);
 		frame.getContentPane().add(southPanel, BorderLayout.SOUTH);
@@ -360,52 +396,195 @@ public class ParserScreen {
 		textField.setHorizontalAlignment(SwingConstants.LEFT);
 		southPanel.add(textField);
 		textField.setColumns(40);
-
-		JButton searchButton = new JButton("Search");
-		searchButton
-				.setIcon(new ImageIcon(
-						"C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\search_icon_big.gif"));
-		southPanel.add(searchButton);
 		
-				final JButton caseSensitiveButton = new JButton("Case Sensitive");
-				caseSensitiveButton.addActionListener(new ActionListener() {
+				JButton searchButton = new JButton("Search");
+				searchButton
+						.setIcon(new ImageIcon(
+								"C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\search_icon_big.gif"));
+				southPanel.add(searchButton);
+				
+				JPanel replaceAllPanel = new JPanel();
+				replaceAllPanel.setBackground(new Color(255, 255, 0));
+				replaceAllPanel.setBorder(UIManager.getBorder("EditorPane.border"));
+				replaceAllPanel.setForeground(new Color(51, 204, 0));
+				southPanel.add(replaceAllPanel);
+				
+				JLabel newWordLabel = new JLabel("New Word");
+				replaceAllPanel.add(newWordLabel);
+				
+				replaceFieldText = new JTextField();
+				replaceAllPanel.add(replaceFieldText);
+				replaceFieldText.setToolTipText("");
+				replaceFieldText.setColumns(10);
+				
+				JLabel lblNewLabel_1 = new JLabel("Old Word");
+				replaceAllPanel.add(lblNewLabel_1);
+				
+				oldStringField = new JTextField();
+				replaceAllPanel.add(oldStringField);
+				oldStringField.setColumns(10);
+				
+				JButton btnReplaceAll = new JButton("Replace All");
+				replaceAllPanel.add(btnReplaceAll);
+				btnReplaceAll.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
-						caseSensitiveButton.setForeground(Color.BLACK);}
+						replaceAll(oldStringField.getText(),replaceFieldText.getText());
+
+					}
+
+					private void replaceAll(String oldString, String newString) {
+						if (!oldString.equals("")) {
+							String editorText = textArea.getText();
+							editorText = editorText.replaceAll(oldString, newString);
+							textArea.setText(editorText);
+						}
+					}
 				});
-				caseSensitiveButton
-						.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Logger\\font-icon.png"));
-				southPanel.add(caseSensitiveButton);
-
-		JButton upButton = new JButton("Up");
-		upButton.setIcon(new ImageIcon(
-				"C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\upArrow.png"));
-		southPanel.add(upButton);
-		upButton.setEnabled(false);
-
-		JButton downButton = new JButton("Down");
-		downButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-
-			}
-		});
-		downButton
-				.setIcon(new ImageIcon(
-						"C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\arrow-down-circle.png"));
-		southPanel.add(downButton);
-		downButton.setEnabled(false);
-
-		JButton exitButton = new JButton("Exit");
-		exitButton
-				.setIcon(new ImageIcon(
-						"C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\exit.gif"));
-		southPanel.add(exitButton);
-		// EXIT BUTTON
-		exitButton.addActionListener(new ActionListener() {
-
-			public void actionPerformed(ActionEvent arg0) {
-				System.exit(0);
-			}
-		});
+				btnReplaceAll.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Logger\\2_twitter_retweet_icon.png"));
+				
+						// SEARCH BUTTON
+						searchButton.addActionListener(new ActionListener() {
+				
+							public void actionPerformed(ActionEvent arg0) {
+								if (textArea.getText().isEmpty()) {
+									JOptionPane.showMessageDialog(null, "No text in view");
+								} else {
+									String newText = textField.getText().toLowerCase();
+				
+									// Terminates without any action if input string is empty
+									if (newText.equals("")) {
+										if (existingText.equals("")) {
+											return;
+										} else {
+											selectNextInstanceOfText();
+										}
+									} else {
+				
+										// Check whether the user is trying to find the next
+										// instance of
+										// a string that was already searched in the text area
+										// or
+										// the user is searching for a new string in the text
+										// area
+										if (!newText.equals(existingText)) {
+											find(newText, textArea);
+										} else {
+											selectNextInstanceOfText();
+										}
+									}
+								}
+							}
+				
+							private void find(String newText, JTextPane textArea) {
+								textPositions = new ArrayList<Integer>();
+				
+								// For case insensitivity
+								String lowerCaseText = textArea.getText().toLowerCase();
+				
+								textArea.getHighlighter().removeAllHighlights();
+								existingText = newText;
+								int startPositionInTextArea = 0;
+								int endPositionInTextArea = 0;
+				
+								// Used to highlight first instance of text yellow in TextLayout
+								boolean firstPosition = (textArea == textArea);
+				
+								// Find all instances of the string in the text area
+								// and highlight them
+								while (endPositionInTextArea < textArea.getText().length()) {
+									startPositionInTextArea = lowerCaseText.indexOf(
+											existingText, startPositionInTextArea);
+									endPositionInTextArea = startPositionInTextArea
+											+ (existingText.length());
+				
+									// Break the while loop if there are no more instances of
+									// the given string to find
+									if (startPositionInTextArea == NO_MORE_INSTANCES) {
+										break;
+									} else {
+										textPositions.add(endPositionInTextArea);
+										try {
+				
+											// Highlight the first instance of the string yellow
+											if (firstPosition) {
+												highlightFirstInstanceYellow();
+												firstPosition = false;
+											}
+				
+											// Highlight all instances blue
+											textArea.getHighlighter().addHighlight(
+													startPositionInTextArea,
+													endPositionInTextArea,
+													DefaultHighlighter.DefaultPainter);
+										} catch (BadLocationException e) {
+											e.printStackTrace();
+										}
+										startPositionInTextArea++;
+									}
+								}
+								if (firstPosition) {
+									JOptionPane.showMessageDialog(null, "String not found");
+								}
+				
+							}
+				
+							private void highlightFirstInstanceYellow()
+									throws BadLocationException {
+								int positionOfFirstInstance = textPositions.get(0);
+								try {
+									textArea.getHighlighter().changeHighlight(
+											yellowHighlighter,
+											positionOfFirstInstance - existingText.length(),
+											positionOfFirstInstance);
+								} catch (NullPointerException e) {
+									yellowHighlighter = textArea.getHighlighter().addHighlight(
+											positionOfFirstInstance - existingText.length(),
+											positionOfFirstInstance,
+											new DefaultHighlighter.DefaultHighlightPainter(
+													Color.YELLOW));
+								}
+				
+								textArea.setCaretPosition(positionOfFirstInstance);
+				
+							}
+				
+							private void selectNextInstanceOfText() {
+								try {
+									int selectedTextPosition = textPositions.get((textPositions
+											.indexOf(textArea.getCaretPosition())) + 1);
+									textArea.setCaretPosition(selectedTextPosition);
+									try {
+										textArea.getHighlighter().changeHighlight(
+												yellowHighlighter,
+												selectedTextPosition - existingText.length(),
+												selectedTextPosition);
+									} catch (BadLocationException e) {
+										e.printStackTrace();
+									}
+								} catch (IndexOutOfBoundsException e) {
+									returnToFirstInstanceOfText();
+								}
+				
+							}
+				
+							private void returnToFirstInstanceOfText() {
+								if (textArea.getHighlighter().getHighlights().length == 0) {
+									JOptionPane.showMessageDialog(null, "String not found");
+								} else {
+									endOfFileReached();
+									try {
+										highlightFirstInstanceYellow();
+									} catch (BadLocationException e) {
+										e.printStackTrace();
+									}
+								}
+				
+							}
+				
+							private void endOfFileReached() {
+								JOptionPane.showMessageDialog(null, "End of file reached");
+							}
+						});
 
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane
@@ -419,150 +598,6 @@ public class ParserScreen {
 		frame.getContentPane().add(scrollPane, BorderLayout.CENTER);
 		frame.setBounds(0, 0, 1200, 700);
 		frame.setVisible(true);
-
-		// SEARCH BUTTON
-		searchButton.addActionListener(new ActionListener() {
-
-			public void actionPerformed(ActionEvent arg0) {
-				if (textArea.getText().isEmpty()) {
-					JOptionPane.showMessageDialog(null, "No text in view");
-				} else {
-					String newText = textField.getText().toLowerCase();
-
-					// Terminates without any action if input string is empty
-					if (newText.equals("")) {
-						if (existingText.equals("")) {
-							return;
-						} else {
-							selectNextInstanceOfText();
-						}
-					} else {
-
-						// Check whether the user is trying to find the next
-						// instance of
-						// a string that was already searched in the text area
-						// or
-						// the user is searching for a new string in the text
-						// area
-						if (!newText.equals(existingText)) {
-							find(newText, textArea);
-						} else {
-							selectNextInstanceOfText();
-						}
-					}
-				}
-			}
-
-			private void find(String newText, JTextPane textArea) {
-				textPositions = new ArrayList<Integer>();
-
-				// For case insensitivity
-				String lowerCaseText = textArea.getText().toLowerCase();
-
-				textArea.getHighlighter().removeAllHighlights();
-				existingText = newText;
-				int startPositionInTextArea = 0;
-				int endPositionInTextArea = 0;
-
-				// Used to highlight first instance of text yellow in TextLayout
-				boolean firstPosition = (textArea == textArea);
-
-				// Find all instances of the string in the text area
-				// and highlight them
-				while (endPositionInTextArea < textArea.getText().length()) {
-					startPositionInTextArea = lowerCaseText.indexOf(
-							existingText, startPositionInTextArea);
-					endPositionInTextArea = startPositionInTextArea
-							+ (existingText.length());
-
-					// Break the while loop if there are no more instances of
-					// the given string to find
-					if (startPositionInTextArea == NO_MORE_INSTANCES) {
-						break;
-					} else {
-						textPositions.add(endPositionInTextArea);
-						try {
-
-							// Highlight the first instance of the string yellow
-							if (firstPosition) {
-								highlightFirstInstanceYellow();
-								firstPosition = false;
-							}
-
-							// Highlight all instances blue
-							textArea.getHighlighter().addHighlight(
-									startPositionInTextArea,
-									endPositionInTextArea,
-									DefaultHighlighter.DefaultPainter);
-						} catch (BadLocationException e) {
-							e.printStackTrace();
-						}
-						startPositionInTextArea++;
-					}
-				}
-				if (firstPosition) {
-					JOptionPane.showMessageDialog(null, "String not found");
-				}
-
-			}
-
-			private void highlightFirstInstanceYellow()
-					throws BadLocationException {
-				int positionOfFirstInstance = textPositions.get(0);
-				try {
-					textArea.getHighlighter().changeHighlight(
-							yellowHighlighter,
-							positionOfFirstInstance - existingText.length(),
-							positionOfFirstInstance);
-				} catch (NullPointerException e) {
-					yellowHighlighter = textArea.getHighlighter().addHighlight(
-							positionOfFirstInstance - existingText.length(),
-							positionOfFirstInstance,
-							new DefaultHighlighter.DefaultHighlightPainter(
-									Color.YELLOW));
-				}
-
-				textArea.setCaretPosition(positionOfFirstInstance);
-
-			}
-
-			private void selectNextInstanceOfText() {
-				try {
-					int selectedTextPosition = textPositions.get((textPositions
-							.indexOf(textArea.getCaretPosition())) + 1);
-					textArea.setCaretPosition(selectedTextPosition);
-					try {
-						textArea.getHighlighter().changeHighlight(
-								yellowHighlighter,
-								selectedTextPosition - existingText.length(),
-								selectedTextPosition);
-					} catch (BadLocationException e) {
-						e.printStackTrace();
-					}
-				} catch (IndexOutOfBoundsException e) {
-					returnToFirstInstanceOfText();
-				}
-
-			}
-
-			private void returnToFirstInstanceOfText() {
-				if (textArea.getHighlighter().getHighlights().length == 0) {
-					JOptionPane.showMessageDialog(null, "String not found");
-				} else {
-					endOfFileReached();
-					try {
-						highlightFirstInstanceYellow();
-					} catch (BadLocationException e) {
-						e.printStackTrace();
-					}
-				}
-
-			}
-
-			private void endOfFileReached() {
-				JOptionPane.showMessageDialog(null, "End of file reached");
-			}
-		});
 
 		// RADIOBUTTON VERBOSE
 		verboseButton.addActionListener(new ActionListener() {
