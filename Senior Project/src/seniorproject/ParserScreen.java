@@ -2,6 +2,7 @@ package parserTool;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -31,14 +32,18 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.SwingConstants;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DefaultHighlighter;
+import javax.swing.text.DefaultStyledDocument;
 import javax.swing.text.Highlighter;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyledDocument;
+
+import com.orsoncharts.graphics3d.swing.UpAction;
 
 public class ParserScreen {
 
@@ -52,12 +57,10 @@ public class ParserScreen {
 	private Object yellowHighlighter = null;
 	private static int NO_MORE_INSTANCES = -1;
 
-
-	
 	public ParserScreen(String fileName) throws FileNotFoundException {
 		frame = new JFrame();
 		frame.getContentPane().setLayout(new BorderLayout(0, 0));
-
+		textArea.setContentType("text/plain");
 		JPanel topPanel = new JPanel();
 		FlowLayout flowLayout = (FlowLayout) topPanel.getLayout();
 		flowLayout.setAlignment(FlowLayout.LEFT);
@@ -213,8 +216,8 @@ public class ParserScreen {
 					while (scanner.hasNextLine()) {
 						line = scanner.nextLine();
 						if (line.contains(customTagTextField.getText())) {
-							textArea.setText(textArea.getText()+line);
-							textArea.setText(textArea.getText()+"\n");
+							textArea.setText(textArea.getText() + line);
+							textArea.setText(textArea.getText() + "\n");
 							textArea.setForeground(Color.BLACK);
 						}
 					}
@@ -225,6 +228,14 @@ public class ParserScreen {
 				textArea.setEditable(false);
 			}
 		});
+		final JButton btnUpdate = new JButton("Update");
+		btnUpdate.setEnabled(false);
+		btnUpdate.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				customTagButton.setEnabled(true);
+				customTagButton.setText(customTagTextField.getText());
+			}
+		});
 
 		final JRadioButton customTagRadioButton = new JRadioButton("Custom Tag");
 		customTagRadioButton.addActionListener(new ActionListener() {
@@ -233,65 +244,108 @@ public class ParserScreen {
 			public void actionPerformed(ActionEvent e) {
 				if (customTagRadioButton.isSelected()) {
 					customTagTextField.setEnabled(true);
-				}else{
-					customTagButton.setText("Custom Tag");
+					btnUpdate.setEnabled(true);
+				} else {
+					customTagButton.setText(customTagTextField.getText());
 					customTagTextField.setEnabled(false);
+					btnUpdate.setEnabled(false);
 				}
-			}
-		});
-		
-		JButton btnUpdate = new JButton("Update");
-		btnUpdate.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				customTagButton.setEnabled(true);
-				customTagButton.setText(customTagTextField.getText());
 			}
 		});
 
 		GroupLayout gl_panel = new GroupLayout(panel);
-		gl_panel.setHorizontalGroup(
-			gl_panel.createParallelGroup(Alignment.TRAILING)
-				.addGroup(gl_panel.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_panel.createSequentialGroup()
-							.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-								.addComponent(customTagButton, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-								.addComponent(customTagTextField, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-								.addComponent(loggingLevelLabel, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)
-								.addComponent(verboseButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-								.addComponent(debugButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-								.addComponent(infoButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-								.addComponent(warnButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-								.addComponent(errorButton, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-								.addComponent(customTagRadioButton))
-							.addContainerGap())
-						.addComponent(btnUpdate, Alignment.TRAILING)))
-		);
-		gl_panel.setVerticalGroup(
-			gl_panel.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_panel.createSequentialGroup()
-					.addComponent(loggingLevelLabel)
-					.addGap(5)
-					.addComponent(verboseButton)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(debugButton)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(infoButton)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(warnButton)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(errorButton)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(customTagButton, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
-					.addComponent(customTagRadioButton)
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(customTagTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(btnUpdate)
-					.addGap(82))
-		);
+		gl_panel.setHorizontalGroup(gl_panel
+				.createParallelGroup(Alignment.TRAILING)
+				.addGroup(
+						gl_panel.createSequentialGroup()
+								.addContainerGap()
+								.addGroup(
+										gl_panel.createParallelGroup(
+												Alignment.LEADING)
+												.addGroup(
+														gl_panel.createSequentialGroup()
+																.addGroup(
+																		gl_panel.createParallelGroup(
+																				Alignment.LEADING)
+																				.addComponent(
+																						customTagButton,
+																						GroupLayout.DEFAULT_SIZE,
+																						111,
+																						Short.MAX_VALUE)
+																				.addComponent(
+																						customTagTextField,
+																						Alignment.TRAILING,
+																						GroupLayout.DEFAULT_SIZE,
+																						111,
+																						Short.MAX_VALUE)
+																				.addComponent(
+																						loggingLevelLabel,
+																						GroupLayout.PREFERRED_SIZE,
+																						86,
+																						GroupLayout.PREFERRED_SIZE)
+																				.addComponent(
+																						verboseButton,
+																						Alignment.TRAILING,
+																						GroupLayout.DEFAULT_SIZE,
+																						111,
+																						Short.MAX_VALUE)
+																				.addComponent(
+																						debugButton,
+																						Alignment.TRAILING,
+																						GroupLayout.DEFAULT_SIZE,
+																						111,
+																						Short.MAX_VALUE)
+																				.addComponent(
+																						infoButton,
+																						Alignment.TRAILING,
+																						GroupLayout.DEFAULT_SIZE,
+																						111,
+																						Short.MAX_VALUE)
+																				.addComponent(
+																						warnButton,
+																						Alignment.TRAILING,
+																						GroupLayout.DEFAULT_SIZE,
+																						GroupLayout.DEFAULT_SIZE,
+																						Short.MAX_VALUE)
+																				.addComponent(
+																						errorButton,
+																						Alignment.TRAILING,
+																						GroupLayout.DEFAULT_SIZE,
+																						111,
+																						Short.MAX_VALUE)
+																				.addComponent(
+																						customTagRadioButton))
+																.addContainerGap())
+												.addComponent(btnUpdate,
+														Alignment.TRAILING))));
+		gl_panel.setVerticalGroup(gl_panel.createParallelGroup(
+				Alignment.LEADING).addGroup(
+				gl_panel.createSequentialGroup()
+						.addComponent(loggingLevelLabel)
+						.addGap(5)
+						.addComponent(verboseButton)
+						.addPreferredGap(ComponentPlacement.RELATED)
+						.addComponent(debugButton)
+						.addPreferredGap(ComponentPlacement.RELATED)
+						.addComponent(infoButton)
+						.addPreferredGap(ComponentPlacement.RELATED)
+						.addComponent(warnButton)
+						.addPreferredGap(ComponentPlacement.RELATED)
+						.addComponent(errorButton)
+						.addPreferredGap(ComponentPlacement.RELATED)
+						.addComponent(customTagButton,
+								GroupLayout.PREFERRED_SIZE, 42,
+								GroupLayout.PREFERRED_SIZE)
+						.addPreferredGap(ComponentPlacement.RELATED, 96,
+								Short.MAX_VALUE)
+						.addComponent(customTagRadioButton)
+						.addPreferredGap(ComponentPlacement.UNRELATED)
+						.addComponent(customTagTextField,
+								GroupLayout.PREFERRED_SIZE,
+								GroupLayout.DEFAULT_SIZE,
+								GroupLayout.PREFERRED_SIZE)
+						.addPreferredGap(ComponentPlacement.RELATED)
+						.addComponent(btnUpdate).addGap(82)));
 		panel.setLayout(gl_panel);
 
 		JPanel southPanel = new JPanel();
@@ -312,6 +366,15 @@ public class ParserScreen {
 				.setIcon(new ImageIcon(
 						"C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\search_icon_big.gif"));
 		southPanel.add(searchButton);
+		
+				final JButton caseSensitiveButton = new JButton("Case Sensitive");
+				caseSensitiveButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent arg0) {
+						caseSensitiveButton.setForeground(Color.BLACK);}
+				});
+				caseSensitiveButton
+						.setIcon(new ImageIcon("C:\\Users\\erdikoch\\Desktop\\workspace\\Logger\\font-icon.png"));
+				southPanel.add(caseSensitiveButton);
 
 		JButton upButton = new JButton("Up");
 		upButton.setIcon(new ImageIcon(
@@ -320,18 +383,16 @@ public class ParserScreen {
 		upButton.setEnabled(false);
 
 		JButton downButton = new JButton("Down");
+		downButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+
+			}
+		});
 		downButton
 				.setIcon(new ImageIcon(
 						"C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\arrow-down-circle.png"));
 		southPanel.add(downButton);
 		downButton.setEnabled(false);
-
-		JButton markButton = new JButton("Mark All");
-		markButton
-				.setIcon(new ImageIcon(
-						"C:\\Users\\erdikoch\\Desktop\\workspace\\Senior Project\\ecc239b23d8e0da79a1aa90f0a831a21.jpg"));
-		southPanel.add(markButton);
-		markButton.setEnabled(false);
 
 		JButton exitButton = new JButton("Exit");
 		exitButton
@@ -377,9 +438,12 @@ public class ParserScreen {
 						}
 					} else {
 
-						// Check whether the user is trying to find the next instance of
-						// a string that was already searched in the text area or
-						// the user is searching for a new string in the text area
+						// Check whether the user is trying to find the next
+						// instance of
+						// a string that was already searched in the text area
+						// or
+						// the user is searching for a new string in the text
+						// area
 						if (!newText.equals(existingText)) {
 							find(newText, textArea);
 						} else {
@@ -406,8 +470,8 @@ public class ParserScreen {
 				// Find all instances of the string in the text area
 				// and highlight them
 				while (endPositionInTextArea < textArea.getText().length()) {
-					startPositionInTextArea = lowerCaseText.indexOf(existingText,
-							startPositionInTextArea);
+					startPositionInTextArea = lowerCaseText.indexOf(
+							existingText, startPositionInTextArea);
 					endPositionInTextArea = startPositionInTextArea
 							+ (existingText.length());
 
@@ -427,7 +491,8 @@ public class ParserScreen {
 
 							// Highlight all instances blue
 							textArea.getHighlighter().addHighlight(
-									startPositionInTextArea, endPositionInTextArea,
+									startPositionInTextArea,
+									endPositionInTextArea,
 									DefaultHighlighter.DefaultPainter);
 						} catch (BadLocationException e) {
 							e.printStackTrace();
@@ -436,28 +501,29 @@ public class ParserScreen {
 					}
 				}
 				if (firstPosition) {
-				JOptionPane.showMessageDialog(null, "String not found");
+					JOptionPane.showMessageDialog(null, "String not found");
 				}
-				
+
 			}
 
-			private void highlightFirstInstanceYellow() throws BadLocationException {
+			private void highlightFirstInstanceYellow()
+					throws BadLocationException {
 				int positionOfFirstInstance = textPositions.get(0);
 				try {
-					textArea.getHighlighter().changeHighlight(yellowHighlighter,
+					textArea.getHighlighter().changeHighlight(
+							yellowHighlighter,
 							positionOfFirstInstance - existingText.length(),
 							positionOfFirstInstance);
 				} catch (NullPointerException e) {
-					yellowHighlighter = textArea.getHighlighter()
-							.addHighlight(
-									positionOfFirstInstance - existingText.length(),
-									positionOfFirstInstance,
-									new DefaultHighlighter.DefaultHighlightPainter(
-											Color.YELLOW));
+					yellowHighlighter = textArea.getHighlighter().addHighlight(
+							positionOfFirstInstance - existingText.length(),
+							positionOfFirstInstance,
+							new DefaultHighlighter.DefaultHighlightPainter(
+									Color.YELLOW));
 				}
 
 				textArea.setCaretPosition(positionOfFirstInstance);
-				
+
 			}
 
 			private void selectNextInstanceOfText() {
@@ -466,7 +532,8 @@ public class ParserScreen {
 							.indexOf(textArea.getCaretPosition())) + 1);
 					textArea.setCaretPosition(selectedTextPosition);
 					try {
-						textArea.getHighlighter().changeHighlight(yellowHighlighter,
+						textArea.getHighlighter().changeHighlight(
+								yellowHighlighter,
 								selectedTextPosition - existingText.length(),
 								selectedTextPosition);
 					} catch (BadLocationException e) {
@@ -475,7 +542,7 @@ public class ParserScreen {
 				} catch (IndexOutOfBoundsException e) {
 					returnToFirstInstanceOfText();
 				}
-				
+
 			}
 
 			private void returnToFirstInstanceOfText() {
@@ -489,11 +556,11 @@ public class ParserScreen {
 						e.printStackTrace();
 					}
 				}
-				
+
 			}
 
 			private void endOfFileReached() {
-				JOptionPane.showMessageDialog(null, "End of file reached");				
+				JOptionPane.showMessageDialog(null, "End of file reached");
 			}
 		});
 
@@ -511,19 +578,17 @@ public class ParserScreen {
 					String line;
 					while (scanner.hasNextLine()) {
 						line = scanner.nextLine();
-						if(line.contains("V/")){
-							textArea.setBackground(Color.CYAN);
-							textArea.setText(textArea.getText()+line);
-							textArea.setText(textArea.getText()+"\n");
-						//	textArea.setForeground(Color.CYAN);
-						}else{
+						if (line.contains("V/")) {
+							textArea.setText(textArea.getText() + line);
+							textArea.setText(textArea.getText() + "\n");
+							// textArea.setForeground(Color.CYAN);
+						} else {
 							textArea.setForeground(Color.BLACK);
-							textArea.setText(textArea.getText()+line);
-							textArea.setText(textArea.getText()+"\n");
-							
+							textArea.setText(textArea.getText() + line);
+							textArea.setText(textArea.getText() + "\n");
+
 						}
-						
-					
+
 					}
 					scanner.close();
 				} catch (FileNotFoundException e1) {
@@ -531,7 +596,6 @@ public class ParserScreen {
 				}
 			}
 		});
-	
 
 		// RADIOBUTTON DEBUG
 		debugButton.addActionListener(new ActionListener() {
@@ -551,8 +615,9 @@ public class ParserScreen {
 					String line;
 					while (scanner.hasNextLine()) {
 						line = scanner.nextLine();
-						textArea.setText(textArea.getText()+line);
-						textArea.setText(textArea.getText()+"\n");						textArea.setForeground(Color.BLACK);
+						textArea.setText(textArea.getText() + line);
+						textArea.setText(textArea.getText() + "\n");
+						textArea.setForeground(Color.BLACK);
 					}
 					scanner.close();
 				} catch (FileNotFoundException e1) {
@@ -580,8 +645,9 @@ public class ParserScreen {
 					String line;
 					while (scanner.hasNextLine()) {
 						line = scanner.nextLine();
-						textArea.setText(textArea.getText()+line);
-						textArea.setText(textArea.getText()+"\n");						textArea.setForeground(Color.BLACK);
+						textArea.setText(textArea.getText() + line);
+						textArea.setText(textArea.getText() + "\n");
+						textArea.setForeground(Color.BLACK);
 					}
 					scanner.close();
 				} catch (FileNotFoundException e1) {
@@ -609,8 +675,9 @@ public class ParserScreen {
 					String line;
 					while (scanner.hasNextLine()) {
 						line = scanner.nextLine();
-						textArea.setText(textArea.getText()+line);
-						textArea.setText(textArea.getText()+"\n");						textArea.setForeground(Color.BLACK);
+						textArea.setText(textArea.getText() + line);
+						textArea.setText(textArea.getText() + "\n");
+						textArea.setForeground(Color.BLACK);
 					}
 					scanner.close();
 				} catch (FileNotFoundException e1) {
@@ -638,8 +705,9 @@ public class ParserScreen {
 					String line;
 					while (scanner.hasNextLine()) {
 						line = scanner.nextLine();
-						textArea.setText(textArea.getText()+line);
-						textArea.setText(textArea.getText()+"\n");						textArea.setForeground(Color.BLACK);
+						textArea.setText(textArea.getText() + line);
+						textArea.setText(textArea.getText() + "\n");
+						textArea.setForeground(Color.BLACK);
 					}
 					scanner.close();
 				} catch (FileNotFoundException e1) {
@@ -707,8 +775,9 @@ public class ParserScreen {
 				textArea.setText("");
 				String nextLine = in.readLine();
 				while (nextLine != null) {
-					textArea.setText(textArea.getText()+nextLine);
-					textArea.setText(textArea.getText()+"\n");					nextLine = in.readLine();
+					textArea.setText(textArea.getText() + nextLine);
+					textArea.setText(textArea.getText() + "\n");
+					nextLine = in.readLine();
 				}
 				in.close();
 			} catch (IOException e) {
