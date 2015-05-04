@@ -2,7 +2,6 @@ package parserTool;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -36,19 +35,13 @@ import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.SwingConstants;
+import javax.swing.UIManager;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DefaultHighlighter;
-import javax.swing.text.DefaultStyledDocument;
 import javax.swing.text.Highlighter;
+import javax.swing.text.Style;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
-
-import com.orsoncharts.graphics3d.swing.UpAction;
-
-import javax.swing.JCheckBox;
-import javax.swing.UIManager;
-
-import org.jfree.ui.RefineryUtilities;
 
 public class ParserScreen {
 
@@ -63,6 +56,11 @@ public class ParserScreen {
 	private static int NO_MORE_INSTANCES = -1;
 	private JTextField replaceFieldText;
 	private JTextField oldStringField;
+	
+	
+	public ParserScreen(){
+		
+	}
 
 	public ParserScreen(String fileName) throws FileNotFoundException {
 		frame = new JFrame();
@@ -166,6 +164,7 @@ public class ParserScreen {
 				TimeStatisticalChart demo;
 				try {
 					demo = new TimeStatisticalChart();
+					
 					  
 				} catch (FileNotFoundException e1) {
 					// TODO Auto-generated catch block
@@ -445,7 +444,7 @@ public class ParserScreen {
 						// SEARCH BUTTON
 						searchButton.addActionListener(new ActionListener() {
 				
-							public void actionPerformed(ActionEvent arg0) {
+							public void actionPerformed(ActionEvent arg0) {	
 								if (textArea.getText().isEmpty()) {
 									JOptionPane.showMessageDialog(null, "No text in view");
 								} else {
@@ -611,22 +610,33 @@ public class ParserScreen {
 				try {
 					Scanner scanner = new Scanner(new File("Verbose.txt"));
 					String line;
+					Style style = textArea.addStyle("", null);
+					StyledDocument doc = textArea.getStyledDocument();
+
 					while (scanner.hasNextLine()) {
 						line = scanner.nextLine();
 						if (line.contains("V/")) {
-							textArea.setText(textArea.getText() + line);
-							textArea.setText(textArea.getText() + "\n");
-							// textArea.setForeground(Color.CYAN);
-						} else {
-							textArea.setForeground(Color.BLACK);
-							textArea.setText(textArea.getText() + line);
-							textArea.setText(textArea.getText() + "\n");
-
+							StyleConstants.setForeground(style, Color.PINK);
+					        doc.insertString(doc.getLength(), line + "\n",style);
+					   }
+						else if (line.contains("D/")) {
+							StyleConstants.setForeground(style, Color.MAGENTA);
+					        doc.insertString(doc.getLength(), line + "\n",style);
+					   }
+						else if (line.contains("I/")) {
+							StyleConstants.setForeground(style, Color.BLUE);
+					        doc.insertString(doc.getLength(), line + "\n",style);
+					   }
+						else if (line.contains("W/")) {
+							StyleConstants.setForeground(style, Color.YELLOW);
+					        doc.insertString(doc.getLength(), line + "\n",style);
+					   } else {
+							StyleConstants.setForeground(style, Color.RED);
+					        doc.insertString(doc.getLength(), line + "\n",style);
 						}
-
 					}
 					scanner.close();
-				} catch (FileNotFoundException e1) {
+				} catch (FileNotFoundException | BadLocationException e1) {
 					e1.printStackTrace();
 				}
 			}
@@ -648,14 +658,30 @@ public class ParserScreen {
 				try {
 					Scanner scanner = new Scanner(new File("Debug.txt"));
 					String line;
+					Style style = textArea.addStyle("", null);
+					StyledDocument doc = textArea.getStyledDocument();
 					while (scanner.hasNextLine()) {
 						line = scanner.nextLine();
-						textArea.setText(textArea.getText() + line);
-						textArea.setText(textArea.getText() + "\n");
-						textArea.setForeground(Color.BLACK);
+						
+						 if (line.contains("D/")) {
+							StyleConstants.setForeground(style, Color.MAGENTA);
+					        doc.insertString(doc.getLength(), line + "\n",style);
+					   }
+						else if (line.contains("I/")) {
+							StyleConstants.setForeground(style, Color.BLUE);
+					        doc.insertString(doc.getLength(), line + "\n",style);
+					   }
+						else if (line.contains("W/")) {
+							StyleConstants.setForeground(style, Color.YELLOW);
+					        doc.insertString(doc.getLength(), line + "\n",style);
+					   } else {
+							StyleConstants.setForeground(style, Color.RED);
+					        doc.insertString(doc.getLength(), line + "\n",style);
+						}
+					
 					}
 					scanner.close();
-				} catch (FileNotFoundException e1) {
+				} catch (FileNotFoundException | BadLocationException e1) {
 					e1.printStackTrace();
 				}
 				textArea.setEditable(true);
@@ -678,14 +704,25 @@ public class ParserScreen {
 				try {
 					Scanner scanner = new Scanner(new File("Info.txt"));
 					String line;
+					Style style = textArea.addStyle("", null);
+					StyledDocument doc = textArea.getStyledDocument();
 					while (scanner.hasNextLine()) {
 						line = scanner.nextLine();
-						textArea.setText(textArea.getText() + line);
-						textArea.setText(textArea.getText() + "\n");
-						textArea.setForeground(Color.BLACK);
+						
+						 if (line.contains("I/")) {
+							StyleConstants.setForeground(style, Color.BLUE);
+					        doc.insertString(doc.getLength(), line + "\n",style);
+					   }
+						else if (line.contains("W/")) {
+							StyleConstants.setForeground(style, Color.YELLOW);
+					        doc.insertString(doc.getLength(), line + "\n",style);
+					   } else {
+							StyleConstants.setForeground(style, Color.RED);
+					        doc.insertString(doc.getLength(), line + "\n",style);
+						}
 					}
 					scanner.close();
-				} catch (FileNotFoundException e1) {
+				} catch (FileNotFoundException | BadLocationException e1) {
 					e1.printStackTrace();
 				}
 				textArea.setEditable(false);
@@ -708,14 +745,21 @@ public class ParserScreen {
 				try {
 					Scanner scanner = new Scanner(new File("Warn.txt"));
 					String line;
+					Style style = textArea.addStyle("", null);
+					StyledDocument doc = textArea.getStyledDocument();
 					while (scanner.hasNextLine()) {
 						line = scanner.nextLine();
-						textArea.setText(textArea.getText() + line);
-						textArea.setText(textArea.getText() + "\n");
-						textArea.setForeground(Color.BLACK);
+					
+						 if (line.contains("W/")) {
+							StyleConstants.setForeground(style, Color.YELLOW);
+					        doc.insertString(doc.getLength(), line + "\n",style);
+					   } else {
+							StyleConstants.setForeground(style, Color.RED);
+					        doc.insertString(doc.getLength(), line + "\n",style);
+						}
 					}
 					scanner.close();
-				} catch (FileNotFoundException e1) {
+				} catch (FileNotFoundException | BadLocationException e1) {
 					e1.printStackTrace();
 				}
 				textArea.setEditable(false);
@@ -738,14 +782,18 @@ public class ParserScreen {
 				try {
 					Scanner scanner = new Scanner(new File("Error.txt"));
 					String line;
+					Style style = textArea.addStyle("", null);
+					StyledDocument doc = textArea.getStyledDocument();
 					while (scanner.hasNextLine()) {
 						line = scanner.nextLine();
-						textArea.setText(textArea.getText() + line);
-						textArea.setText(textArea.getText() + "\n");
-						textArea.setForeground(Color.BLACK);
+						 if (line.contains("E/")) {
+								StyleConstants.setForeground(style, Color.RED);
+						        doc.insertString(doc.getLength(), line + "\n",style);
+						   } 
+						
 					}
 					scanner.close();
-				} catch (FileNotFoundException e1) {
+				} catch (FileNotFoundException | BadLocationException e1) {
 					e1.printStackTrace();
 				}
 				textArea.setEditable(false);
@@ -914,5 +962,8 @@ public class ParserScreen {
 		writer.flush();
 		scanner.close();
 		writer.close();
+	}
+	public void parseiOSLog(String fileName){
+		
 	}
 }
