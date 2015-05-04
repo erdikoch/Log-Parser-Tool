@@ -45,6 +45,8 @@ import java.io.FileNotFoundException;
 import java.util.Random;
 import java.util.Scanner;
 
+import javax.swing.JFrame;
+
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -63,7 +65,7 @@ import org.jfree.ui.RefineryUtilities;
  * {@link XYDataset}.
  *
  */
-public class TimeStatisticalChart extends ApplicationFrame {
+public class TimeStatisticalChart {
 
     /**
      * Creates a new demo.
@@ -71,15 +73,19 @@ public class TimeStatisticalChart extends ApplicationFrame {
      * @param title  the frame title.
      * @throws FileNotFoundException 
      */
-    public TimeStatisticalChart(final String title) throws FileNotFoundException {
+    public TimeStatisticalChart() throws FileNotFoundException {
 
-        super(title);
-
+        super();
+        
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         final XYDataset dataset = createDataset();
         final JFreeChart chart = createChart(dataset);
         final ChartPanel chartPanel = new ChartPanel(chart);
         chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
-        setContentPane(chartPanel);
+        frame.setContentPane(chartPanel);
+        frame.setBounds(200, 200, 500, 270);
+        frame.setVisible(true);
 
     }
 	private static Double errorCounter() throws FileNotFoundException {
@@ -278,32 +284,6 @@ public class TimeStatisticalChart extends ApplicationFrame {
                 
         return chart;
         
-    }
-
-    // ****************************************************************************
-    // * JFREECHART DEVELOPER GUIDE                                               *
-    // * The JFreeChart Developer Guide, written by David Gilbert, is available   *
-    // * to purchase from Object Refinery Limited:                                *
-    // *                                                                          *
-    // * http://www.object-refinery.com/jfreechart/guide.html                     *
-    // *                                                                          *
-    // * Sales are used to provide funding for the JFreeChart project - please    * 
-    // * support us so that we can continue developing free software.             *
-    // ****************************************************************************
-    
-    /**
-     * Starting point for the demonstration application.
-     *
-     * @param args  ignored.
-     * @throws FileNotFoundException 
-     */
-    public static void main(final String[] args) throws FileNotFoundException {
-
-        final TimeStatisticalChart demo = new TimeStatisticalChart("Line Chart Demo 6");
-        demo.pack();
-        RefineryUtilities.centerFrameOnScreen(demo);
-        demo.setVisible(true);
-
     }
 
 }
